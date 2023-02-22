@@ -1,0 +1,222 @@
+{ 
+    "name" : "Round 1 - Head to Head",
+    "marking": "+5 points for each correct answer",
+    "hints" : [
+        {
+            "q_num" : "ALL",
+            "text": "In the event of a tie, 2.5 points are awarded"
+        },
+        {
+            "q_num" : "Q8",
+            "text": "'Wrong' means they lose the review"
+        }
+    ],
+    "questions" : [
+        {
+            "num" : 1,
+            "round" : "Head to Head",
+            "slug" : "head",
+            "name": "h2h_wickets_eng",
+            "title": "Old Dog vs the Older",
+            "hint" : "If one player gets injured, for any question, bad luck",
+            "question" : "Who will take more wickets?",
+            "options" : [
+                {
+                "label" : "James Anderson",
+                "value" : "James Anderson",
+                "team": "eng"
+                },
+                {
+                    "label" : "Stuart Broad",
+                    "value" : "Stuart Broad",
+                    "team": "eng"
+                }
+            ],
+            "answer" : "Jimmy Anderson"
+        },          
+        {
+            "num" : 2,
+            "round" : "Head to Head",
+            "slug" : "head",
+            "name": "h2h_wickets_aus",
+            "title": "Bigus Dickus",
+            "question" : "Who will take more wickets?",
+            "options" : [{
+                "label" : "Pat Cummins",
+                "value" : "Pat Cummins",
+                "team": "aus"
+
+                },
+                {
+                    "label" : "Josh Hazlewood",
+                    "value" : "Josh Hazlewood",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "Pat Cummins"
+        },      
+        {
+            "num" : 3,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "name": "h2h_wickets_pt",
+            "title": "Part timers",
+            "question" : "Who will take more wickets?",
+            "options" : [{
+                "label" : "Joe Root",
+                "value" : "Joe Root",
+                "team": "eng"
+
+                },
+                {
+                    "label" : "Marnus Labushagne",
+                    "value" : "Marnus Labushagne",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "Joe Root"
+        },   
+        {
+            "num" : 4,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "name": "h2h_catches",
+            "title": "Safe Hands",
+            "explainer" : "",
+            "question" : "Who will take more catches?",
+            "options" : [{
+                "name" : "h2h_catches",
+                "label" : "Joe Root",
+                "value" : "Joe Root",
+                "team": "eng"
+
+                },
+                {
+                    "name" : "h2h_catches",
+                    "label" : "David Warner",
+                    "value" : "David Warner",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "David Warner"
+        },
+        {
+            "num" : 5,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "explainer" : "",
+            "name": "h2h_runs_eng",
+            "title": "Power or Precision",
+
+            "question" : "Who will score more runs?",
+            "options" : [
+                {
+                    "label" : "Joe Root",
+                    "value" : "Joe Root",
+                    "team": "eng"
+
+                },
+                {
+                    "label" : "Ben Stokes",
+                    "value" : "Ben Stokes",
+                    "team": "eng"
+
+                }
+            
+            ],
+            "answer" : "Joe Root"
+        },       
+        {
+            "num" : 6,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "explainer" : "",
+            "name": "h2h_runs_aus",
+            "title": "Master v Padawan",
+
+            "question" : "Who will score more runs?",
+            "options" : [
+                {
+                    "label" : "Steve Smith",
+                    "value" : "Steve Smith",
+                    "team": "aus"
+
+                },
+                {
+                    "label" : "Marnus Labuschagne",
+                    "value" : "Marnus Labuschagne",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "Marnus Labuschagne"
+        },    
+        {
+
+            "num" : 7,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "explainer" : "",
+            "name": "h2h_runs_bowlers",
+            "title": "Slogger",
+
+            "question" : "Who will score more runs?",
+            "options" : [
+                {
+                    "label" : "Stuart Broad",
+                    "value" : "Stuart Broad",
+                    "team": "eng"
+
+                    
+                },
+                {
+                    "label" : "Nathan Lyon",
+                    "value" : "Nathan Lyon",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "Nathan Lyon"
+        },
+        {
+            "num" : 8,
+            "round" : "Head to Head",
+            "slug" : "head",
+
+            "title": "Stay with your onfield decision",
+            "hint" : "Not umpire's call. Wrong means they lose that review.",
+
+            "name" : "h2h_reviews",
+
+            "question" : "Who will get more reviews wrong?",
+            "options" : [
+                {
+                    "label" : "England",
+                    "value" : "England",
+                    "team": "eng"
+
+                },
+                {
+                    "label" : "Australia",
+                    "value" : "Australia",
+                    "team": "aus"
+
+                }
+            
+            ],
+            "answer" : "aus"
+        }]
+}

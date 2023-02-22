@@ -1,0 +1,78 @@
+{
+    "h2h_wickets_eng" : "Jimmy Anderson",
+    "h2h_wickets_aus" : "Josh Hazlewood",
+    "h2h_catches" : "Josh Hazlewood",
+    "h2h_runs_eng" : "Jonny Bairstow",
+    "h2h_runs_aus" : "Steve Smith",
+    "h2h_reviews" : "Australia",
+    "h2h_field" : "Australia",
+
+
+    "num_players" : "28",
+    "num_wk" : "40",
+    "num_maidens" : "345",
+    "num_spin" : "38",
+    "num_elevenRuns" : "56",
+
+  
+    "fifties": [
+        "Zak Crawley",
+        "David Warner",
+        "Marnus Labushagne",
+        "Steve Smith",
+        "Joe Root",
+        "Ollie Pope",
+        "Ben Stokes",
+        "Jonny Bairstow",
+        "Mitchell Starc",
+        "Pat Cummins",
+        "Stuart Broad"
+    ],
+    "quack" : [
+        "David Warner",
+        "Cameron Green",
+        "Zak Crawley"
+    ],
+
+    "tenWickets" : [
+        "Nathan Lyon",
+        "Jack Leach",
+        "Stuart Broad",
+        "Josh Hazlewood",
+        "Ben Stokes",
+        "Ollie Robinson",
+        "James Anderson",
+        "Pat Cummins",
+        "Mark Wood"
+    ],
+    "bigHitters" : [
+        "Ben Stokes",
+        "Steve Smith"
+    ],
+    "fullStraight": [
+        "Jack Leach",
+        "Mitchell Marsh"
+    ],
+
+
+
+    "tf_chase" : true,
+    "tf_jofra" : true,
+    "tf_jimmyRetire" : true,
+    "tf_nighthawk" : false,
+    "tf_batterDrop" : false,
+    "tf_moreThanBurns" : false,
+    "tf_bazBall" : true,
+    "tf_leachy" : true,
+    "tf_rootTon" : true,
+    "tf_decided" : true,
+
+
+
+    "m_tailenders" : "Caught Outfield",
+    "m_warnerBroad" : "5 - 6",
+    "m_venues" : "Lord's",
+    "m_camGreen" : "Batting Average",
+    "m_firstInns" : "250-274"
+
+}

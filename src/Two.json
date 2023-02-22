@@ -1,0 +1,75 @@
+{ 
+    "name" : "Round 2 - Pick Em",
+    "marking": "Points are different for each question",
+    "hints" : [
+        {
+            "q_num" : "Q9",
+            "text": "No extra points for multiple hundreds"
+        },
+        {
+            "q_num" : "Q10",
+            "text": "David Warner in 2019 got 3, so that would be 9 points"
+        },        
+        {
+            "q_num" : "Q11",
+            "text": "No extra points for multiple 5fers"
+        },        
+        {
+            "q_num" : "Q12",
+            "text": "No upper limit. If your pick keeps hitting them, you keep getting points"
+        }
+
+    ],
+    "questions" : [
+        {
+            "num" : 9,
+            "name" : "tons",
+            "title": "Ton Up",
+            "round": "Pick Em",
+            "help" : "No extra points for multiple hundreds",
+            "explainer" : "+5 for each correct, -3 for each incorrect or missed",
+            "question" : "Pick EVERY batter that will score a hundred.",
+            "options" : "all"
+        },        
+        {
+            "num" : 10,
+            "round": "Pick Em",
+            "name": "quack",
+            "title": "Quack Quack",
+            "help" : "David Warner in 2019 got 3, so that would be 9 points",
+            "explainer" : "+3 for each duck",
+            "question" : "Pick THREE top 7 batters who will get ducks.",
+            "options" : "batters"
+        },        
+        {
+            "num" : 11,
+            "round": "Pick Em",
+            "name" : "5fers",
+            "title" : "5-fers!",
+            "explainer" : "+5 for each correct, -3 for each incorrect or missed",
+            "question" : "Pick EVERY bowler who will take a 5fer",
+            "options" : "bowlers"
+        },
+        {
+            "num" : 12,
+            "title": "Big Hitters",
+            "round": "Pick Em",
+            "name": "bigHitters",
+            "hint" : "No upper limit. If your pick keeps hitting them, you keep getting points.",
+    
+            "explainer" : "+2 for each six hit",
+            "question" : "Pick ONE player from each team who will hit the most sixes.",
+            "options" : "all"
+        },
+        {
+            "num" : 13,
+            "round": "Pick Em",
+            "name": "fullStraight",
+            "title": "Full & Straight",
+            "hint" : "Points for each dismissal",
+            "explainer" : "+2 for each bowled or LBW dismissal",
+            "question" : "Pick ONE bowler from each team who will take the most wickets bowled or LBW.",
+            "options" : "bowlers"
+        }
+    ]
+}

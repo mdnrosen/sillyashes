@@ -1,0 +1,174 @@
+[
+    {
+        "number": "24",
+        "name": "tf_chase",
+        "guess": "true"
+    },
+    {
+        "number": "25",
+        "name": "tf_jofra",
+        "guess": "false"
+    },
+    {
+        "number": "26",
+        "name": "tf_jimmyRetire",
+        "guess": "true"
+    },
+    {
+        "number": "27",
+        "name": "tf_nighthawk",
+        "guess": "true"
+    },
+    {
+        "number": "28",
+        "name": "tf_batterDrop",
+        "guess": "true"
+    },
+    {
+        "number": "30",
+        "name": "tf_bazBall",
+        "guess": "true"
+    },
+    {
+        "number": "29",
+        "name": "tf_moreThanBurns",
+        "guess": "false"
+    },
+    {
+        "number": "31",
+        "name": "tf_leachy",
+        "guess": "false"
+    },
+    {
+        "number": "32",
+        "name": "tf_rootTon",
+        "guess": "false"
+    },
+    {
+        "number": "33",
+        "name": "tf_decided",
+        "guess": "true"
+    },
+    {
+        "number": 12,
+        "name": "quack",
+        "guess": [
+            "Zak Crawley",
+            "Ben Duckett",
+            "Usman Khawaja"
+        ]
+    },
+    {
+        "number": 11,
+        "name": "fifties",
+        "guess": [
+            "Zak Crawley",
+            "Steve Smith",
+            "Ben Stokes",
+            "David Warner",
+            "Ben Duckett",
+            "Usman Khawaja",
+            "Marnus Labushagne",
+            "Ollie Pope",
+            "Joe Root",
+            "Travis Head",
+            "Cameron Green",
+            "Jonny Bairstow",
+            "Liam Livingstone",
+            "Ben Foakes",
+            "Mitchell Starc",
+            "Pat Cummins",
+            "Stuart Broad"
+        ]
+    },
+    {
+        "number": 13,
+        "name": "tenWickets",
+        "guess": [
+            "Ollie Robinson",
+            "Jack Leach",
+            "Stuart Broad",
+            "Josh Hazlewood",
+            "Pat Cummins",
+            "Ben Stokes",
+            "James Anderson",
+            "Mark Wood"
+        ]
+    },
+    {
+        "number": 14,
+        "name": "bigHitters",
+        "guess": [
+            "Jonny Bairstow",
+            "Travis Head"
+        ]
+    },
+    {
+        "number": 15,
+        "name": "fullStraight",
+        "guess":  [
+            "Ollie Robinson",
+            "Nathan Lyon"
+        ]
+    },
+    {
+        "number": "8",
+        "name": "num_players",
+        "guess": "28"
+    },
+    {
+        "number": "9",
+        "name": "num_wk",
+        "guess": "43"
+    },
+    {
+        "number": "10",
+        "name": "num_maidens",
+        "guess": "231"
+    },
+    {
+        "number": "11",
+        "name": "num_spin",
+        "guess": "38"
+    },
+    {
+        "number": "12",
+        "name": "num_elevenRuns",
+        "guess": "56"
+    },
+    {
+        "number": "1",
+        "name": "h2h_wickets_eng",
+        "guess": "Jimmy Anderson"
+    },
+    {
+        "number": "2",
+        "name": "h2h_wickets_aus",
+        "guess": "Pat Cummins"
+    },
+    {
+        "number": "3",
+        "name": "h2h_catches",
+        "guess": "warner"
+    },
+    {
+        "number": "4",
+        "name": "h2h_runs_eng",
+        "guess": "Jonny Bairstow"
+    },
+    {
+        "number": "5",
+        "name": "h2h_runs_aus",
+        "guess": "Marnus Labuschagne"
+    },
+    {
+        "number": "6",
+        "name": "h2h_reviews",
+        "guess": "Australia"
+    },
+    {
+        "number": "7",
+        "name": "h2h_field",
+        "guess": "England"
+    }
+]
