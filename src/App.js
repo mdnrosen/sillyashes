@@ -20,6 +20,7 @@ import TrueFalse from './components/TrueFalse'
 import Multis from './components/Multis';
 import Summary from './components/Summary'
 import Results from './components/Results'
+import NotFound from './components/NotFound';
 import theme from './theme'
 
 import dummyAnswers from './dummyAnswers.json'
@@ -70,13 +71,14 @@ function App() {
           <Routes>
 
             <Route path="/head" element={<HeadtoHead guesses={guesses} setGuesses={setGuesses} setProgress={setProgress} />} />
-            <Route path="/multi" element={<Multis guesses={guesses} setGuesses={setGuesses} />} />
-            <Route path="/numbers" element={<Numbers guesses={guesses} setGuesses={setGuesses} />} />
             <Route path="/pick" element={<PickEm guesses={guesses} setGuesses={setGuesses}  />} />
+            <Route path="/numbers" element={<Numbers guesses={guesses} setGuesses={setGuesses} />} />
+            <Route path="/multi" element={<Multis guesses={guesses} setGuesses={setGuesses} />} />
             <Route path="/truefalse" element={<TrueFalse guesses={guesses} setGuesses={setGuesses}  />} />
             <Route path="/summary" element={<Summary guesses={guesses}/>} />
             <Route path="/results" element={<Results guesses={guesses}/>} />
             <Route exact path="/" element={<Home />} />
+            <Route path="/*" element={<NotFound />} />
 
           </Routes>
         </BrowserRouter>

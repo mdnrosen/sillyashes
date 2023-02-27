@@ -47,38 +47,38 @@ const Summary = ({ guesses }) => {
             <ListItem
             secondaryAction={
                 // THIS BIT WILL BE USED FOR THE MARKING BIT
-                // <Stack direction="row">
-                //     {guesses[q.name] === q.answer ?
-                //         <>
-                //             <IconButton 
-                //                 disableFocusRipple
-                //             >
-                //                 <Close color="danger" />
-                //             </IconButton>
-                //             <Button>
-                //                 0 pts
-                //             </Button>
-                //         </>
-                //         :
-                //         <>
-                //             <IconButton 
-                //                 disableFocusRipple
-                //             >
-                //                 <Check color="success" />
-                //             </IconButton>
-                //             <Button>
-                //                 +5 pts
-                //             </Button>
-                //         </>
+                <Stack direction="row">
+                    {guesses[q.name] === q.answer ?
+                        <>
+                            <IconButton 
+                                disableFocusRipple
+                            >
+                                <Close color="danger" />
+                            </IconButton>
+                            <Button>
+                                0 pts
+                            </Button>
+                        </>
+                        :
+                        <>
+                            <IconButton 
+                                disableFocusRipple
+                            >
+                                <Check color="success" />
+                            </IconButton>
+                            <Button>
+                                +5 pts
+                            </Button>
+                        </>
                     
                     
-                //     }
+                    }
 
                     
-                // </Stack>
-                <IconButton onClick={() => navigate(`/${q.slug}`)}>
-                    <Edit />
-                </IconButton>
+                </Stack>
+                // <IconButton onClick={() => navigate(`/${q.slug}`)}>
+                //     <Edit />
+                // </IconButton>
             }>
                 <ListItemIcon>
                     <Typography variant="h6">{`Q${q.num}`}</Typography>
@@ -94,7 +94,6 @@ const Summary = ({ guesses }) => {
                         <Button
                             size="small"
                             sx={{ color: 'white'}}
-                            color={opt.team === 'aus' ? 'australia' : 'england'}
                             disabled={opt.value !== guesses[q.name]}
                             variant={opt.value === guesses[q.name] ? 'contained' : 'outlined'}
                             

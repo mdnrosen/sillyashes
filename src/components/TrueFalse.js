@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
-
-import data from '../master.json'
+import HelpModal from './HelpModal'
+import round from '../Five.json'
 
 const TrueFalse = ({ guesses, setGuesses }) => {
+    const [ open, setOpen ] = useState(false)
+    const toggle = () => setOpen(!open)
+
     const options = [{ value: true, label: 'True' },{ value: false, label: 'False'}]
     const navigate = useNavigate()
-    const questions = data.filter(d => d.round === 'True or False')
 
     const handleChange = (e) => {
         setGuesses({...guesses, [e.target.name]: e.target.value })
@@ -16,12 +18,19 @@ const TrueFalse = ({ guesses, setGuesses }) => {
 
     return (
         <Card>
+            <HelpModal
+                open={open}
+                toggle={toggle}
+                hints={round.hints}
+                roundTitle="TrueFalse"
+            />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">True or False</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">+5 points for each correct</Typography>}
+                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
                 action={
                 <IconButton 
+                    onClick={() => toggle()}
                     sx={{ color: 'white'}}>
                         <Help />
                 </IconButton>
@@ -32,7 +41,7 @@ const TrueFalse = ({ guesses, setGuesses }) => {
             <CardContent>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
-                        {questions.map((q, i) =>
+                        {round.questions.map((q, i) =>
                             <Grid key={i} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
@@ -41,7 +50,13 @@ const TrueFalse = ({ guesses, setGuesses }) => {
                                         <FormControlLabel
                                             key={i}
                                             name={q.name}
-                                            control={<Radio name={q.name} id={q.num} value={opt.value} />}
+                                            control={
+                                                <Radio 
+                                                    name={q.name} 
+                                                    id={q.num} 
+                                                    value={opt.value} 
+                                                    // checked={guesses[q.name] && opt.value === guesses[q.name]}
+                                                />}
                                             label={opt.label}
                                         ></FormControlLabel>   
                                     )}

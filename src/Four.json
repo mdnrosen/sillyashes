@@ -1,0 +1,245 @@
+{
+    "name" : "Round 4 - Randoms",
+    "marking" : "+5 points for each correct",
+    "hints" : [
+        {
+            "q_num":  "Q22",
+            "text" : "Takes into account BOTH team's first innings of each Test."
+        },        
+        {
+            "q_num":  "Q24",
+            "text" : "Batters 9, 10 and 11. eg. Jack Leach as a nightwatchman counts as a tailender"
+        },       
+        {
+            "q_num":  "Q25",
+            "text" : "Shortly after meaning by the time this quiz is marked."
+        }
+    ],
+    "questions" : [
+        {
+            "num" : 19,
+            "round" : "Multis",
+            "name": "m_warnerBroad",
+            "title": "Broad's Bunny",
+            "explainer" : "",
+            "question" : "How many times will Stuart Broad dismiss David Warner?",
+            "options" : [
+                {
+                    "label" : "0 - 1",
+                    "value" : "0 - 1"
+                },              
+                {
+                    "label" : "2 - 3",
+                    "value" : "2 - 3"
+                },              
+                {
+                    "label" : "3 - 4",
+                    "value" : "3 - 4"
+                },               
+                {
+                    "label" : "5 - 6",
+                    "value" : "5 - 6"
+                },                
+                {
+                    "label" : "7+",
+                    "value" : "7+"
+                }
+            
+            ]
+        },
+        {
+            "num" : 20,
+            "round" : "Multis",
+            "name": "m_venues",
+            "explainer" : "",
+            "title": "Road House",
+            "hint": "Flat pitch or rain, doesn't matter.",
+    
+            "question" : "Which venue will see the fewest wickets fall?",
+            "options" : [
+                {
+                    "label" : "Edgbaston",
+                    "value" : "Edgbaston"
+                },              
+                {
+                    "label" : "Lord's",
+                    "value" : "Lord's"
+                },
+                {
+                    "label" : "Headingley",
+                    "value" : "Headingley"
+                },                
+                {
+                    "label" : "Old Trafford",
+                    "value" : "Old Trafford"
+                },                
+                {
+                    "label" : "The Oval",
+                    "value" : "The Oval"
+                }
+            
+            ]
+        },       
+        {
+            "num" : 21,
+            "round" : "Multis",
+            "name": "m_camGreen",
+            "explainer" : "",
+            "title": "All-round Aussie",
+    
+            "question" : "What will be the lower for Cameron Green? His:",
+            "options" : [
+                {
+                    "label" : "Batting Average",
+                    "value" : "Batting Average"
+                },              
+                {
+                    "label" : "Bowling Average",
+                    "value" : "Bowling Average"
+                }
+            
+            ]
+        },        
+        {
+            "num" : 22,
+            "round" : "Multis",
+            "name": "m_firstInns",
+            "explainer" : "",
+            "title": "Runs on the board",
+            "hint": "Takes into account BOTH team's first innings of each Test.",
+            "question" : "What will be the average first innings score?",
+            "options" : [
+                {
+                    "label" : "< 200",
+                    "value" : "< 200"
+                },              
+                {
+                    "label" : "200 - 249",
+                    "value" : "200 - 249"
+                },
+                
+                {
+                    "label" : "250 - 299",
+                    "value" : "250 - 299"
+                },                        
+                {
+                    "label" : "300 - 349",
+                    "value" : "300 - 349"
+                },                    
+                {
+                    "label" : "350+",
+                    "value" : "350+"
+                }
+            ]
+        },
+        {
+            "num" : 23,
+            "round" : "Multis",
+            "name": "m_afterThree",
+            "title": "An early lead?",
+            "hint": "First three Tests are Edgbaston, Lord's & Headingley",
+            "explainer" : "",
+            "question" : "After 3 tests, what will the series score be?",
+            "options" : [
+                {
+                    "label" : "0 - 0",
+                    "value" : "0 - 0"
+                },                       
+                {
+                    "label" : "1 - 0 England",
+                    "value" : "1 - 0 England"
+                },                       
+                {
+                    "label" : "1 - 0 Australia",
+                    "value" : "1 - 0 Australia"
+                },   
+                {
+                    "label" : "1 - 1",
+                    "value" : "1 - 1"
+                },      
+                {
+                    "label" : "2 - 0 England",
+                    "value" : "2 - 0 England"
+                },  
+                {
+                    "label" : "2 - 0 Australia",
+                    "value" : "2 - 0 Australia"
+                },  
+                {
+                    "label" : "2 - 1 England",
+                    "value" : "2 - 1 England"
+                }, 
+                {
+                    "label" : "2 - 1 Australia",
+                    "value" : "2 - 1 Australia"
+                },
+                {
+                    "label" : "3 - 0 England",
+                    "value" : "3 - 0 England"
+                },  
+                {
+                    "label" : "3 - 0 Australia",
+                    "value" : "3 - 0 Australia"
+                }       
+            ]
+        },        
+        {
+            "num" : 24,
+            "round" : "Multis",
+            "name": "m_tailenders",
+            "title": "Don't let the tail wag",
+            "hint": "What will be the most common dismissal for tailenders?",
+            "explainer" : "",
+            "question" : "After 3 tests, what will the series score be?",
+            "options" : [
+                {
+                    "label" : "Bowled",
+                    "value" : "Bowled"
+                },
+                {
+                    "label" : "Caught Behind",
+                    "value" : "Caught Behind"
+                },        
+                {
+                    "label" : "Caught Outfield",
+                    "value" : "Caught Outfield"
+                }, 
+                {
+                    "label" : "LBW",
+                    "value" : "LBW"
+                }, 
+                {
+                    "label" : "Stumped",
+                    "value" : "Stumped"
+                }
+    
+            ]
+        },        
+        {
+            "num" : 25,
+            "round" : "Multis",
+            "name": "m_retirement",
+            "title": "End of an era?",
+            "question" : "Who will annouce their retirement during or shortly after the series?",
+            "options" : [
+                {
+                    "label" : "Jimmy Anderson",
+                    "value" : "Jimmy Anderson"
+                },
+                {
+                    "label" : "Stuart Broad",
+                    "value" : "Stuart Broad"
+                },            
+                {
+                    "label" : "Both",
+                    "value" : "Both"
+                },            
+                {
+                    "label" : "Neither",
+                    "value" : "Neither"
+                }                    
+            ]
+        }
+
+    ]
+}

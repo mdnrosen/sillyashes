@@ -1,0 +1,122 @@
+{
+    "name" : "Round 5 - True or False",
+    "marking" : "+5 points for each correct answer",
+    "hints" : [    
+        {
+            "q_num":  "Q30",
+            "text" : "Out of the team, not down the order"
+        },        
+        {
+            "q_num":  "Q35",
+            "text" : "By 'decided', we mean who retains / wins the Ashes"
+        }
+
+    ],
+    "questions": [
+        {
+            "num" : 26,
+            "explainer" : "",
+            "title" : "Let's chase",
+            "question" : "England will choose to bowl every time they win a toss.",
+            "hint": "If England don't win a toss, then it's 0 points for everyone",
+            "options" : "all",
+            "name": "tf_chase",
+            "round" : "True or False"
+        },         
+        {
+            "num" : 27,
+            "explainer" : "",
+            "title" : "Return of the King",
+            "question" : "Jofra Archer will play at least ONE test.",
+            "hint" : "Not just a sub fielder",
+            "options" : "all",
+            "name": "tf_jofra",
+            "round" : "True or False"
+    
+        },          
+        {
+            "num" : 28,
+            "explainer" : "",
+            "title": "Bowl them out",
+            "question" : "England will take 20 wickets in EVERY test.",
+            "options" : "all",
+            "name": "tf_20wickets",
+            "round" : "True or False"
+    
+        },            
+        {
+            "num" : 29,
+            "explainer" : "",
+            "title": "Nighthawk",
+            "question" : "Stuart Broad will bat higher than SEVEN at least once.",
+            "hint": "In any scenario",
+            "options" : "all",
+            "name": "tf_nighthawk",
+            "round" : "True or False"
+    
+        },            
+        {
+            "num" : 30,
+            "explainer" : "",
+            "title": "Jason Roy'd",
+            "question" : "England will drop a batter during the series.",
+            "hint" : "Out of the team, not down the order"
+    ,        "options" : "all",
+            "name": "tf_batterDrop",
+            "round" : "True or False"
+    
+        },             
+        {
+            "num" : 31,
+            "explainer" : "",
+            "title": "Runs at the top",
+            "question" : "Any opener (for either team) will score more runs than Rory Burns in 2019 (390).",
+            "hint" : "Runs have to be scored opening",
+            "options" : "all",
+            "name": "tf_moreThanBurns",
+            "round" : "True or False"
+    
+        },            
+        {
+            "num" : 32,
+            "explainer" : "",
+            "title": "Baz Ball",
+            "question" : "England will score 175+ in a session",
+            "options" : "all",
+            "name": "tf_bazBall",
+            "round" : "True or False"
+    
+        },           
+        {
+            "num" : 33,
+            "explainer" : "",
+            "title": "Loyalty to spin",
+            "question" : "Jack Leach will play all FIVE tests.",
+            "options" : "all",
+            "name": "tf_leachy",
+            "round" : "True or False"
+    
+        },             
+        {
+            "num" : 34,
+            "explainer" : "",
+            "title": "Back to form",
+            "question" : "Joe Root will score a hundred",
+            "options" : "all",
+            "name": "tf_rootTon",
+            "round" : "True or False"
+    
+        },          
+        {
+            "num" : 35,
+            "explainer" : "",
+            "title": "Dead Rubber",
+            "hint": "By 'decided', we mean who retains / wins the Ashes",
+            "question" : "The Ashes will be decided before the 5th Test.",
+            "options" : "all",
+            "name": "tf_decided",
+            "round" : "True or False"
+    
+        }  
+    ]
+}

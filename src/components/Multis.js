@@ -3,36 +3,35 @@ import React, { useState } from 'react'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 
-import data from '../master.json'
-import round from '../multis.json'
+import round from '../Four.json'
 
 import HelpModal from './HelpModal'
 
 const Multis = ({ guesses, setGuesses }) => {
     const [ open, setOpen ] = useState(false)
+    const toggle = () => setOpen(!open)
 
-    const questions = data.filter(d => d.round === 'Multis')
     const navigate = useNavigate()
+
+
+
     const handleChange = (e) => {
-
         setGuesses({...guesses, [e.target.name]: e.target.value})
-
     }
 
-    const toggle = () => setOpen(!open)
 
     return (
         <Card sx={{ m: 1}}>
             <HelpModal
                 open={open}
                 toggle={toggle}
-                data={data.filter(d => d.round === 'Multis')}
+                hints={round.hints}
                 roundTitle="Randoms"
             />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">Round 4 - Randoms</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">+5 points for each correct answer</Typography>}
+                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
                 action={
                 <IconButton 
                     onClick={() => toggle()}
@@ -46,7 +45,7 @@ const Multis = ({ guesses, setGuesses }) => {
             <CardContent>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
-                        {questions.map((q, i) =>
+                        {round.questions.map((q, i) =>
                             <Grid key={i} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
@@ -75,7 +74,7 @@ const Multis = ({ guesses, setGuesses }) => {
 
                 <Button 
                     variant='outlined'
-                    onClick={() => navigate('/pick')}
+                    onClick={() => navigate('/numbers')}
                 >Back</Button>                
                 <Button 
                     variant='contained'

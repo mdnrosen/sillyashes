@@ -1,6 +1,24 @@
 [
     {
         "team" : "England",
+        "name" : "Rory Burns",
+        "batter" : true,
+        "bowler" : false
+    },
+    {
+        "team" : "England",
+        "name" : "Jason Roy",
+        "batter" : true,
+        "bowler" : false
+    },
+    {
+        "team" : "England",
+        "name" : "Joe Denly",
+        "batter" : true,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
         "name" : "Joe Root",
         "batter" : true,
         "bowler" : true
@@ -13,37 +31,7 @@
     },
     {
         "team" : "England",
-        "name" : "Moeen Ali",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "James Anderson",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Jofra Archer",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
         "name" : "Jonny Bairstow",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "England",
-        "name" : "Stuart Broad",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Rory Burns",
         "batter" : true,
         "bowler" : false
     },
@@ -55,19 +43,19 @@
     },
     {
         "team" : "England",
+        "name" : "Moeen Ali",
+        "batter" : true,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
         "name" : "Sam Curran",
         "batter" : false,
         "bowler" : true
     },
     {
         "team" : "England",
-        "name" : "Joe Denly",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Jack Leach",
+        "name" : "Chris Woakes",
         "batter" : false,
         "bowler" : true
     },
@@ -79,9 +67,21 @@
     },
     {
         "team" : "England",
-        "name" : "Jason Roy",
-        "batter" : true,
-        "bowler" : false
+        "name" : "Stuart Broad",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "Jofra Archer",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "Jack Leach",
+        "batter" : false,
+        "bowler" : true
     },
     {
         "team" : "England",
@@ -91,25 +91,13 @@
     },
     {
         "team" : "England",
-        "name" : "Chris Woakes",
+        "name" : "James Anderson",
         "batter" : false,
         "bowler" : true
     },
     {
         "team" : "Australia",
-        "name" : "Tim Paine",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "Australia",
-        "name" : "Pat Cummins",
-        "batter" : false,
-        "bowler" : true
-    },   
-    {
-        "team" : "Australia",
-        "name" : "Travis Head",
+        "name" : "David Warner",
         "batter" : true,
         "bowler" : false
     },
@@ -127,12 +115,6 @@
     },
     {
         "team" : "Australia",
-        "name" : "Josh Hazlewood",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
         "name" : "Usman Khawaja",
         "batter" : true,
         "bowler" : false
@@ -145,9 +127,27 @@
     },
     {
         "team" : "Australia",
-        "name" : "Nathan Lyon",
-        "batter" : false,
+        "name" : "Steve Smith",
+        "batter" : true,
         "bowler" : true
+    },
+    {
+        "team" : "Australia",
+        "name" : "Travis Head",
+        "batter" : true,
+        "bowler" : false
+    },
+    {
+        "team" : "Australia",   
+        "name" : "Matthew Wade",
+        "batter" : true,
+        "bowler" : false
+    },
+    {
+        "team" : "Australia",
+        "name" : "Tim Paine",
+        "batter" : true,
+        "bowler" : false
     },
     {
         "team" : "Australia",
@@ -157,7 +157,13 @@
     },
     {
         "team" : "Australia",
-        "name" : "Michael Neser",
+        "name" : "Pat Cummins",
+        "batter" : false,
+        "bowler" : true
+    },   
+    {
+        "team" : "Australia",
+        "name" : "Mitchell Starc",
         "batter" : false,
         "bowler" : true
     },
@@ -169,32 +175,28 @@
     },
     {
         "team" : "Australia",
+        "name" : "Michael Neser",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "Australia",
         "name" : "Peter Siddle",
         "batter" : false,
         "bowler" : true
     },
     {
         "team" : "Australia",
-        "name" : "Steve Smith",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "Mitchell Starc",
+        "name" : "Nathan Lyon",
         "batter" : false,
         "bowler" : true
     },
     {
         "team" : "Australia",
-        "name" : "Matthew Wade",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "Australia",
-        "name" : "David Warner",
-        "batter" : true,
-        "bowler" : false
+        "name" : "Josh Hazlewood",
+        "batter" : false,
+        "bowler" : true
     }
+
+
 ]

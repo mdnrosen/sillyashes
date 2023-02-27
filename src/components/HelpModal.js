@@ -5,7 +5,6 @@ import { Close } from '@mui/icons-material'
 
 
 const HelpModal = ({ open, toggle, hints, roundTitle }) => {
-
     return (
         <Dialog 
             open={open}

@@ -1,0 +1,69 @@
+{
+    "name" : "Round 3 - Numbers",
+    "marking" : "+5 points (within 5%), +3 points (within 10%), +1 point (within 15%)",
+    "hints" : [
+        {
+            "q_num":  "Q14",
+            "text" : "Playing means named in the starting XI + concussion subs."
+        },       
+        {
+            "q_num":  "Q15",
+            "text" : "Nicks or top edges, just anything in the gloves."
+        },        
+        {
+            "q_num":  "Q18",
+            "text" : "Not listed 11, but whoever is the last man in."
+        }
+
+    ],
+    "questions" : [
+        {
+            "num" : 14,
+            "round" : "Numbers",
+            "title": "Rest & Rotate",
+            "question" : "How many different players will play a test?",
+            "answer" : "",
+            "name": "num_playersTOtal"
+    
+        },          
+         {
+            "num" : 15,
+            "round" : "Numbers",
+            "title": "In the gloves",
+            "question" : "How many wicket keeper catches?",
+            "answer" : "",
+            "name": "num_wk"
+    
+        },       
+        {
+            "num" : 16,
+            "round" : "Numbers",
+            "title": "Go Hard",
+            "question" : "What will Ben Stokes' batting strike rate be?",
+            "answer" : "",
+            "name": "num_stokesSR"
+    
+        },
+        {
+            "num" : 17,
+            "round" : "Numbers",
+            "title": "Nice Garry",
+            "question" : "How many wickets will fall to spin?",
+            "help" : "Pretty self-explanatory",
+            "answer" : "",
+            "name": "num_spin"
+    
+        },        
+        {
+            "num" : 18,
+            "round" : "Numbers",
+            "title" : "Agar-ing it",
+            "question" : "How many runs will be scored at number 11?",
+            "answer" : "",
+            "name": "num_elevenRuns"
+    
+        }
+    ]
+
+    
+}
