@@ -13,11 +13,14 @@ exports.getBGColor = (name, players) => {
 
 
 
-exports.checkRoundComplete = (guesses, data, round) => {
-    const questions = data.filter(d => d.slug === round)
-    console.log(questions)
-    Object.keys(guesses)
-    // let difference = arr1.filter(x => !arr2.includes(x));
-    const missing = questions.filter(q => !Object.keys(guesses).includes(q.name))
-    console.log(missing)
+exports.roundComplete = (questions, guesses) => {
+    const answered = Object.keys(guesses)
+    const matches = questions.filter(q => answered.includes(q.name))
+    const length = questions.length
+    if (matches.length === length) {
+        return true
+    } else {
+        return false
+    }
+
 }   

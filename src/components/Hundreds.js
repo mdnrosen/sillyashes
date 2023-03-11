@@ -16,7 +16,7 @@ const Hundreds = ({ handlePickem, question }) => {
     useEffect(() => {
 
         if (!selected.length) return
-        handlePickem(selected, 'fifties')
+        handlePickem(selected, 'tons')
     },[selected])
 
     const renderCheckbox = (name, i) => (

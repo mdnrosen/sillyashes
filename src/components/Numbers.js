@@ -68,7 +68,7 @@ const Numbers = ({ guesses, setGuesses }) => {
                 >Back</Button>          
                  <Button 
                     variant='contained'
-                    onClick={() => navigate('/multis')}
+                    onClick={() => navigate('/multi')}
                 >Next</Button>
             </CardActions>
         </Card>

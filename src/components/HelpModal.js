@@ -17,7 +17,7 @@ const HelpModal = ({ open, toggle, hints, roundTitle }) => {
                 {hints.map((hint, i) =>
                         <ListItem key={i}>
                             <ListItemIcon>
-                                <Typography variant="h6">?</Typography>
+                                <Typography variant="h6">•</Typography>
 
                             </ListItemIcon>
                             <ListItemText 
