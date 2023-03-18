@@ -1,11 +1,11 @@
 import React from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { roundComplete } from '../../helpers'
 
 
-const Two_Summary = ({ round, guesses }) => {
+const Three_Summary = ({ round, guesses }) => {
 
     const complete = roundComplete(round.questions, guesses)
     const navigate = useNavigate()
@@ -42,16 +42,13 @@ const Two_Summary = ({ round, guesses }) => {
 
 
                         </ListItem>
-                            <Toolbar>
-                                <Stack direction="row" spacing={1}>
-                                    {guesses[q.name] ? guesses[q.name].map((guess, i) => 
-                                        <Chip
-                                            color="primary"
-                                            label={guess}
-                
-                                        ></Chip>
-                                    ) : null}
-                                </Stack>
+                            <Toolbar sx={{ textAlign: 'center'}}>
+                                    {guesses[q.name] ? 
+                                        <Avatar 
+                                            variant="square"
+                                            sx={{ ml: 10, bgcolor: '#0047BB'}}
+                                        >{guesses[q.name]}</Avatar>
+                                        : null}
                         
                             </Toolbar>
                         <Divider />
@@ -65,4 +62,4 @@ const Two_Summary = ({ round, guesses }) => {
 }
 
 
-export default Two_Summary
+export default Three_Summary

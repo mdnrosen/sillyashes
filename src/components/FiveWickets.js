@@ -19,7 +19,7 @@ const FiveWickets = ({ handlePickem, question }) => {
 
     useEffect(() => {
         if (!selected.length) return
-        handlePickem(selected, 'tenWickets', 13)
+        handlePickem(selected, '5fers', 13)
     },[selected])
 
 

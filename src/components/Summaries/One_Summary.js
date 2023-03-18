@@ -44,10 +44,13 @@ const One_Summary = ({ round, guesses }) => {
                         </ListItem>
                         <Toolbar>
                             <Stack direction="row" spacing={2}>
-                                {q.options.map((opt, i) =>
+                                {q.options.map((opt, i) => 
                                     <Chip
                                         label={opt.value}
-                                        // sx={{ opacity: {opt.value === guesses[q.name] ? 1 : 0}}}
+                                        variant={opt.value === guesses[q.name] ? 'conatined' : 'outlined'}
+                                        color={opt.value === guesses[q.name] ? 'primary' : 'default'}
+
+                                    // sx={{ opacity: {opt.value === guesses[q.name] ? 1 : 0}}}
                                     >
 
                                     </Chip>

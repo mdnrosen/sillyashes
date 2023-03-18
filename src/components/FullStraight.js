@@ -18,7 +18,7 @@ const FullStraight = ({ handlePickem, question }) => {
 
     useEffect(() => {
         if (!Object.values(selected).length) return
-        handlePickem(selected, 'fullStraight', 15)
+        handlePickem(Object.values(selected), 'fullStraight', 15)
     },[selected])
 
 
@@ -47,7 +47,7 @@ const FullStraight = ({ handlePickem, question }) => {
                     <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>
                             <InputLabel>England</InputLabel>
-                            <Select label="England" name="engFS" onChange={handleChange}>
+                            <Select label="England" name="engFS" onChange={handleChange} value={selected.engFS || ''}>
                                 {bowlersEng.map((b, i) =>
                                     <MenuItem
                                         key={i}
@@ -63,7 +63,7 @@ const FullStraight = ({ handlePickem, question }) => {
                      <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>
                             <InputLabel>Australia</InputLabel>
-                            <Select label="Australia" name="ausFS" onChange={handleChange}>
+                            <Select label="Australia" name="ausFS" onChange={handleChange} value={selected.ausFS || ''}>
                                 {bowlersAus.map((b, i) =>
                                     <MenuItem
                                         key={i}
