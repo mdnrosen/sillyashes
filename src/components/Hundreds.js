@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography, } from '@mui/material'
 
+import { GuessContext } from '../App'
+
+
+
 
 const Hundreds = ({ handlePickem, question }) => {
+    const guesses = useContext(GuessContext)
     const [ selected, setSelected ] = useState([])
-
     const handleChange = (e) => {
         const { value, checked } = e.target
         setSelected(prevState => 
@@ -14,27 +18,36 @@ const Hundreds = ({ handlePickem, question }) => {
             prevState.filter(val => val !== value))
     }
     useEffect(() => {
-
         if (!selected.length) return
         handlePickem(selected, 'tons')
     },[selected])
 
+
+    useEffect(() => {
+        setSelected(guesses['tons'])
+    },[])
+
+
+
+
     const renderCheckbox = (name, i) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
-        <FormGroup
-            onChange={handleChange}
-        >
-            <FormControlLabel
-                control={
-                    <Checkbox 
-                        value={name} 
+            <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+                <FormGroup
+                    onChange={handleChange}
+                >
+                    <FormControlLabel
+                        control={
+                            <Checkbox 
+                                checked={guesses['tons'].includes(name)}
+                                value={name} 
+                            />
+                        }
+                        label={name}
                     />
-                }
-                label={name}
-            />
-        </FormGroup>
-    </Grid>
-    )
+                </FormGroup>
+            </Grid>
+        )
+    
 
     return (
         <Grid item >

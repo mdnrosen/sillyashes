@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback , createContext } from 'react'
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -23,19 +23,23 @@ import Results from './components/Results'
 import NotFound from './components/NotFound';
 import theme from './theme'
 
+import defaultState from './defaultState.json'
 import dummyAnswers from './dummyAnswers.json'
 import ScrollToTop from './components/ScrollToTop'
-
+export const GuessContext = createContext([])
 
 function App() {
 
-  
+
   function useStickyState(defaultVal, key) {
     const [ value, setValue ] = useState(() => {
       const stickyVal = window.localStorage.getItem(key)
       return stickyVal !== null ? JSON.parse(stickyVal) : defaultVal
     })
 
+
+
+    
 
 
     const handleProgress = useCallback(() => {
@@ -49,7 +53,7 @@ function App() {
     return [ value, setValue ]
   }
   
-  const [ guesses, setGuesses ] = useStickyState({}, 'sillyAshes')
+  const [ guesses, setGuesses ] = useStickyState(defaultState, 'sillyAshes')
   const [ progress, setProgress]  = useState(4)
   const [ step, setStep] = useState(1)
 
@@ -67,20 +71,22 @@ function App() {
 
         <BrowserRouter>
           <ScrollToTop />
+          <GuessContext.Provider value={guesses}>
           {/* <Progress current={step} /> */}
-          <Routes>
+            <Routes>
 
-            <Route path="/head" element={<HeadtoHead guesses={guesses} setGuesses={setGuesses} setProgress={setProgress} />} />
-            <Route path="/pick" element={<PickEm guesses={guesses} setGuesses={setGuesses}  />} />
-            <Route path="/numbers" element={<Numbers guesses={guesses} setGuesses={setGuesses} />} />
-            <Route path="/multi" element={<Multis guesses={guesses} setGuesses={setGuesses} />} />
-            <Route path="/truefalse" element={<TrueFalse guesses={guesses} setGuesses={setGuesses}  />} />
-            <Route path="/summary" element={<Summary guesses={guesses}/>} />
-            <Route path="/results" element={<Results guesses={guesses}/>} />
-            <Route exact path="/" element={<Home />} />
-            <Route path="/*" element={<NotFound />} />
+              <Route path="/head" element={<HeadtoHead guesses={guesses} setGuesses={setGuesses} setProgress={setProgress} />} />
+              <Route path="/pick" element={<PickEm guesses={guesses} setGuesses={setGuesses}  />} />
+              <Route path="/numbers" element={<Numbers guesses={guesses} setGuesses={setGuesses} />} />
+              <Route path="/multi" element={<Multis guesses={guesses} setGuesses={setGuesses} />} />
+              <Route path="/truefalse" element={<TrueFalse guesses={guesses} setGuesses={setGuesses}  />} />
+              <Route path="/summary" element={<Summary guesses={guesses}/>} />
+              <Route path="/results" element={<Results guesses={guesses}/>} />
+              <Route exact path="/" element={<Home />} />
+              <Route path="/*" element={<NotFound />} />
 
-          </Routes>
+            </Routes>
+          </GuessContext.Provider>
         </BrowserRouter>
 
       </Container>

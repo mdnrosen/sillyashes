@@ -19,9 +19,12 @@ const PickEm = ({ guesses, setGuesses }) => {
 
     const navigate = useNavigate()
     const handlePickem = (selected, questionName) => {
-
         setGuesses({...guesses, [questionName]: selected })
     }
+
+    // const handleSelects = (selected, questionName) => {
+    //     setGuesses
+    // }
 
 
 

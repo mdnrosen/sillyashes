@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormControl, InputLabel, Select, MenuItem, FormGroup, Grid, Radio, RadioGroup, Toolbar, Tooltip, Typography } from '@mui/material'
 
-
+import { GuessContext } from '../App'
 const FullStraight = ({ handlePickem, question }) => {
+    
     const bowlersAus = players.filter(p => p.team === 'Australia' && p.bowler)
     const bowlersEng = players.filter(p => p.team === 'England' && p.bowler)
     const [ selected, setSelected ] = useState({})

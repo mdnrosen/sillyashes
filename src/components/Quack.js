@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 
+import { GuessContext } from '../App'
 
 const Quack = ({ handlePickem, question }) => {
+    const guesses = useContext(GuessContext) 
 
     const batters = players.filter(pl => pl.batter)
 
@@ -23,6 +25,9 @@ const Quack = ({ handlePickem, question }) => {
         handlePickem(selected, 'quack', 12)
     },[selected])
 
+    useEffect(() => {
+        setSelected(guesses['quack'])
+    },[])
 
 
     const isDisabled = (value) => { 
@@ -65,7 +70,11 @@ const Quack = ({ handlePickem, question }) => {
                             >
                                 <FormControlLabel
                                     control={
-                                        <Checkbox value={p.name} disabled={isDisabled(p.name)}/>
+                                        <Checkbox 
+                                            value={p.name} 
+                                            disabled={isDisabled(p.name)}
+                                            checked={selected.includes(p.name)}
+                                        />
                                     }
                                     label={p.name}
                                 />

@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 
+import { GuessContext } from '../App'
+
 
 const FiveWickets = ({ handlePickem, question }) => {
+    const guesses = useContext(GuessContext)
     const bowlers = players.filter(p => p.bowler)
     const [ selected, setSelected ] = useState([])
 
@@ -22,6 +25,10 @@ const FiveWickets = ({ handlePickem, question }) => {
         handlePickem(selected, '5fers', 13)
     },[selected])
 
+
+    useEffect(() => {
+        setSelected(guesses['5fers'])
+    },[])
 
 
     return (
@@ -53,7 +60,10 @@ const FiveWickets = ({ handlePickem, question }) => {
                             >
                                 <FormControlLabel
                                     control={
-                                        <Checkbox value={p.name} />
+                                        <Checkbox 
+                                            value={p.name} 
+                                            checked={selected.includes(p.name)}    
+                                        />
                                     }
                                     label={p.name}
                                 />

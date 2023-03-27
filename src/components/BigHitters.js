@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Chip, Divider,FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material'
-
+import { GuessContext } from '../App'
 
 const BigHitters = ({ handlePickem, question }) => {
+    const guesses = useContext(GuessContext)
     const battersAus = players.filter(p => p.team === 'Australia')
     const battersEng = players.filter(p => p.team === 'England')
     const [ selected, setSelected ] = useState({})
@@ -12,17 +13,21 @@ const BigHitters = ({ handlePickem, question }) => {
 
 
     const handleChange = (e) => {
-        const { value  } = e.target
-        setSelected({...selected, [e.target.name]: value})
+        const { value, name  } = e.target
+
+        console.log('name changing ->', name)
+        setSelected({...selected, [name]: value})
     }
 
     useEffect(() => {
         if (!Object.values(selected).length) return
-        handlePickem(Object.values(selected), 'bigHitters', 14)
+        handlePickem(selected, 'bigHitters', 14)
     },[selected])
 
 
-
+    useEffect(() => {
+        setSelected(guesses['bigHitters'])
+    },[])
 
     return (
         <Grid item xs={12}>
@@ -49,7 +54,7 @@ const BigHitters = ({ handlePickem, question }) => {
                     <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>
                             <InputLabel>England</InputLabel>
-                            <Select label="England" name="engSixes" onChange={handleChange} value={selected.engSixes || ''}>
+                            <Select label="England" name="engSixes" onChange={handleChange} value={selected.engSixes|| ''}>
                                 {battersEng.map((b, i) =>
                                     <MenuItem
                                         key={i}
@@ -65,7 +70,7 @@ const BigHitters = ({ handlePickem, question }) => {
                      <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>
                             <InputLabel>Australia</InputLabel>
-                            <Select label="Australia" name="ausSixes" onChange={handleChange} value={selected.ausSixes ?? ''}>
+                            <Select label="Australia" name="ausSixes" onChange={handleChange} value={selected.ausSixes || ''}>
                                 {battersAus.map((b, i) =>
                                     <MenuItem
                                         key={i}

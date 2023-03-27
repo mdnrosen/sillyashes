@@ -8,14 +8,14 @@ import roundTwo from '../Two.json'
 import roundThree from '../Three.json'
 import roundFour from '../Four.json'
 
-import One_Summary from './Summaries/One_Summary';
-import Two_Summary from './Summaries/Two_Summary';
-import Three_Summary from './Summaries/Three_Summary';
+import OneSummary from './Summaries/One_Summary';
+import TwoSummary from './Summaries/Two_Summary';
+import ThreeSummary from './Summaries/Three_Summary';
+import FourSummary from './Summaries/Four_Summary';
 
 import { Edit, Close, Check } from '@mui/icons-material'
 import data from '../master.json'
 import { checkRoundComplete } from '../helpers'
-import Four_Summary from './Summaries/Four_Summary';
 
 const Summary = ({ guesses }) => {
     return (
@@ -31,19 +31,19 @@ const Summary = ({ guesses }) => {
                     <br></br>
                     if not say 'there are some answers missing'
                 </Toolbar>
-                <One_Summary 
+                <OneSummary 
                     round={roundOne} 
                     guesses={guesses} 
                 />
-                <Two_Summary
+                <TwoSummary
                     round={roundTwo}
                     guesses={guesses}
                 />               
-                <Three_Summary
+                <ThreeSummary
                     round={roundThree}
                     guesses={guesses}
                 />
-                <Four_Summary
+                <FourSummary
                     round={roundFour}
                     guesses={guesses}
                 />
