@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import HelpModal from './HelpModal'
 import round from '../Five.json'
-
-const TrueFalse = ({ guesses, setGuesses }) => {
+import { GuessContext } from '../App'
+const TrueFalse = ({ setGuesses }) => {
+    const guesses = useContext(GuessContext)
     const [ open, setOpen ] = useState(false)
     const toggle = () => setOpen(!open)
 
@@ -53,9 +54,8 @@ const TrueFalse = ({ guesses, setGuesses }) => {
                                             control={
                                                 <Radio 
                                                     name={q.name} 
-                                                    id={q.num} 
+                                                    id={q.num.toString()} 
                                                     value={opt.value} 
-                                                    // checked={guesses[q.name] && opt.value === guesses[q.name]}
                                                 />}
                                             label={opt.label}
                                         ></FormControlLabel>   

@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 
@@ -7,9 +7,10 @@ import { useNavigate } from 'react-router-dom'
 
 import round from '../One.json'
 import HelpModal from './HelpModal'
+import { GuessContext } from '../App'
 
-
-const HeadtoHead = ({ guesses, setGuesses, setProgress }) => {
+const HeadtoHead = ({ setGuesses, setProgress }) => {
+    const guesses = useContext(GuessContext)
     const [ open, setOpen ] = useState(false)
 
 

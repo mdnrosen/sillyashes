@@ -4,8 +4,9 @@ import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormControl, InputLabel, Select, MenuItem, FormGroup, Grid, Radio, RadioGroup, Toolbar, Tooltip, Typography } from '@mui/material'
 
 import { GuessContext } from '../App'
+
 const FullStraight = ({ handlePickem, question }) => {
-    
+    const guesses = useContext(GuessContext)
     const bowlersAus = players.filter(p => p.team === 'Australia' && p.bowler)
     const bowlersEng = players.filter(p => p.team === 'England' && p.bowler)
     const [ selected, setSelected ] = useState({})
@@ -13,15 +14,19 @@ const FullStraight = ({ handlePickem, question }) => {
 
 
     const handleChange = (e) => {
-        const { value  } = e.target
-        setSelected({...selected, [e.target.name]: value})
+        const { value, name  } = e.target
+        setSelected({...selected, [name]: value})
     }
 
     useEffect(() => {
         if (!Object.values(selected).length) return
-        handlePickem(Object.values(selected), 'fullStraight', 15)
+        handlePickem(selected, 'fullStraight', 15)
     },[selected])
 
+
+    useEffect(() => {
+        setSelected(guesses['fullStraight'])
+    },[])
 
 
     return (

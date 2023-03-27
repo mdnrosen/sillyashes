@@ -1,13 +1,14 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Grid, FormControl,FormGroup, FormLabel, IconButton, TextField, Tooltip, Typography  } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import HelpModal from './HelpModal'
 import { Help } from '@mui/icons-material'
-
+import { GuessContext } from '../App'
 import round from '../Three.json'
 
-const Numbers = ({ guesses, setGuesses }) => {
+const Numbers = ({ setGuesses }) => {
     const [ open, setOpen ] = useState(false)
+    const guesses = useContext(GuessContext)
     const toggle = () => setOpen(!open)
 
     const navigate = useNavigate()
