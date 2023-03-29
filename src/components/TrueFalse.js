@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import HelpModal from './HelpModal'
 import round from '../Five.json'
 import { GuessContext } from '../App'
+
+
 const TrueFalse = ({ setGuesses }) => {
     const guesses = useContext(GuessContext)
     const [ open, setOpen ] = useState(false)
@@ -53,7 +55,8 @@ const TrueFalse = ({ setGuesses }) => {
                                             name={q.name}
                                             control={
                                                 <Radio 
-                                                    name={q.name} 
+                                                checked={guesses[q.name] && opt.value.toString() === guesses[q.name]}
+                                                name={q.name} 
                                                     id={q.num.toString()} 
                                                     value={opt.value} 
                                                 />}
