@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { roundComplete } from '../../helpers'
 
 
-const Two_Summary = ({ round, guesses }) => {
 
-    const complete = roundComplete(round.questions, guesses)
+
+const Two_Summary = ({ round, guesses }) => {
+    const [ complete, setComplete ] = useState(false)
+
+
+    useEffect(() => {
+        setComplete(roundComplete(round.questions, guesses))
+    },[])
+
+
     const navigate = useNavigate()
+
 
 
     return (
@@ -44,13 +53,13 @@ const Two_Summary = ({ round, guesses }) => {
                         </ListItem>
                             <Toolbar>
                                 <Stack direction="row" spacing={1}>
-                                    {guesses[q.name] ? guesses[q.name].map((guess, i) => 
+                                    {/* {guesses[q.name] ? guesses[q.name].map((guess, i) => 
                                         <Chip
                                             color="primary"
                                             label={guess}
                 
                                         ></Chip>
-                                    ) : null}
+                                    ) : null} */}
                                 </Stack>
                         
                             </Toolbar>
