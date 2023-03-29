@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { roundComplete } from '../../helpers'
+import { GuessContext } from '../../App'
 
 
-const Four_Summary = ({ round, guesses }) => {
 
-    const complete = roundComplete(round.questions, guesses)
+
+const Five_Summary = ({ round }) => {
+    const guesses = useContext(GuessContext)
+    const [ complete, setComplete ] = useState(false)
+    useEffect(() => {
+        setComplete(roundComplete(round.questions, guesses))
+    },[guesses])
+    
     const navigate = useNavigate()
+    
 
     return (
         <Accordion>
@@ -21,6 +29,7 @@ const Four_Summary = ({ round, guesses }) => {
                        'Complete'
                         :
                         'Not Complete'
+                
                     }
                 </Typography>
             </AccordionSummary>
@@ -29,7 +38,7 @@ const Four_Summary = ({ round, guesses }) => {
                     <Box key={i}>
                         <ListItem
                             
-                            secondaryAction={<IconButton onClick={() => navigate('/head')}><Edit /></IconButton>}
+                            secondaryAction={<IconButton onClick={() => navigate('/truefalse')}><Edit /></IconButton>}
                         >
                             <ListItemIcon>
                                 <Typography variant="h6">{`Q${q.num}`}</Typography>
@@ -40,19 +49,18 @@ const Four_Summary = ({ round, guesses }) => {
                             />
                         </ListItem>
                         <Toolbar>
-                            <Stack direction="row" spacing={2} sx={{ display: 'flex', flexWrap: 'wrap'}}>
-                                {q.options.map((opt, i) => 
-                                    <Chip
-                                        label={opt.value}
-                                        variant={opt.value === guesses[q.name] ? 'conatined' : 'outlined'}
-                                        color={opt.value === guesses[q.name] ? 'primary' : 'default'}
-
-                                    // sx={{ opacity: {opt.value === guesses[q.name] ? 1 : 0}}}
-                                    >
-
-                                    </Chip>
-
-                                )}
+                            <Stack direction="row" spacing={2}>
+                                <Chip
+                                    variant={guesses[q.name] === 'true' ? 'conatined' : 'outlined'}
+                                    color={guesses[q.name] === 'true' ? 'primary' : 'default'}   
+                                    label="True"
+                                />
+                                <Chip
+                                    variant={guesses[q.name] === 'false' ? 'conatined' : 'outlined'}
+                                    color={guesses[q.name] === 'false' ? 'primary' : 'default'} 
+                                    label="False"
+                                />
+                                    
                             </Stack>
                         </Toolbar>
                             <Divider />
@@ -65,4 +73,4 @@ const Four_Summary = ({ round, guesses }) => {
 }
 
 
-export default Four_Summary
+export default Five_Summary

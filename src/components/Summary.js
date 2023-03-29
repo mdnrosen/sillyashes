@@ -7,11 +7,13 @@ import roundOne from '../One.json'
 import roundTwo from '../Two.json'
 import roundThree from '../Three.json'
 import roundFour from '../Four.json'
+import roundFive from '../Five.json'
 
 import OneSummary from './Summaries/One_Summary';
 import TwoSummary from './Summaries/Two_Summary';
 import ThreeSummary from './Summaries/Three_Summary';
 import FourSummary from './Summaries/Four_Summary';
+import FiveSummary from './Summaries/Five_Summary';
 
 import { Edit, Close, Check } from '@mui/icons-material'
 import data from '../master.json'
@@ -33,19 +35,18 @@ const Summary = ({ guesses }) => {
                 </Toolbar>
                 <OneSummary 
                     round={roundOne} 
-                    guesses={guesses} 
                 />
                 <TwoSummary
                     round={roundTwo}
-                    guesses={guesses}
                 />               
                 <ThreeSummary
                     round={roundThree}
-                    guesses={guesses}
                 />
                 <FourSummary
                     round={roundFour}
-                    guesses={guesses}
+                />
+                <FiveSummary
+                    round={roundFive}
                 />
        
 

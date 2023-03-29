@@ -1,23 +1,21 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { roundComplete } from '../../helpers'
+import { GuessContext } from '../../App'
 
 
 
 
-const Two_Summary = ({ round, guesses }) => {
+const Two_Summary = ({ round }) => {
+    const guesses = useContext(GuessContext)
     const [ complete, setComplete ] = useState(false)
-
-
     useEffect(() => {
         setComplete(roundComplete(round.questions, guesses))
-    },[])
-
-
+    },[guesses])
+    
     const navigate = useNavigate()
-
 
 
     return (

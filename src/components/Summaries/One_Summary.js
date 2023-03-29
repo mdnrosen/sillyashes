@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Box,Button, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { roundComplete } from '../../helpers'
+import { GuessContext } from '../../App'
 
 
 
 
-const One_Summary = ({ round, guesses }) => {
+const One_Summary = ({ round }) => {
+    const guesses = useContext(GuessContext)
+    const [ complete, setComplete ] = useState(false)
+    useEffect(() => {
+        setComplete(roundComplete(round.questions, guesses))
+    },[guesses])
 
-    const complete = roundComplete(round.questions, guesses)
+
     const navigate = useNavigate()
 
     return (
@@ -46,6 +52,7 @@ const One_Summary = ({ round, guesses }) => {
                             <Stack direction="row" spacing={2}>
                                 {q.options.map((opt, i) => 
                                     <Chip
+                                        key={i + q.name}
                                         label={opt.value}
                                         variant={opt.value === guesses[q.name] ? 'conatined' : 'outlined'}
                                         color={opt.value === guesses[q.name] ? 'primary' : 'default'}
