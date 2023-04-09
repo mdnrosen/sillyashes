@@ -59,8 +59,9 @@ const Numbers = ({ setGuesses }) => {
                     </Grid>
                 </Box>
             </CardContent>
+            <Divider />
             <CardActions
-                sx={{ justifyContent: 'flex-end', p: 2}}
+                sx={{ justifyContent: 'space-between', p: 1}}
             >
                 <Button 
                     variant='outlined'

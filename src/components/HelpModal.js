@@ -16,15 +16,15 @@ const HelpModal = ({ open, toggle, questions }) => {
             <DialogContent>
                 {questions.map((q, i) =>
                         <ListItem key={q.name}>
-                            <ListItemIcon>
+                            {/* <ListItemIcon>
                                 <Typography variant="h6">{`Q${q.num}`}</Typography>
 
-                            </ListItemIcon>
+                            </ListItemIcon> */}
                             <ListItemText 
-                                // primary={<Typography variant="h6">{q.help}</Typography>}
+                                primary={<Typography variant="h6">{`Q${q.num}`}</Typography>}
                                 secondary={<Typography variant="body1">{q.help}</Typography>}
                             />
-
+                            
 
                         </ListItem>
                     

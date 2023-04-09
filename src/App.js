@@ -24,6 +24,7 @@ import theme from './theme'
 
 import defaultState from './defaultState.json'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollTopButton from './components/ScrollTopButton';
 export const GuessContext = createContext([])
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <ScrollToTop />
+          <ScrollTopButton />
           <GuessContext.Provider value={guesses}>
           {/* <Progress current={step} /> */}
             <Routes>

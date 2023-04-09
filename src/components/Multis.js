@@ -25,7 +25,7 @@ const Multis = ({ setGuesses }) => {
 
 
     return (
-        <Card>
+        <Card sx={{ md: {m: 1} }}>
             <HelpModal
                 open={open}
                 toggle={toggle}
@@ -73,7 +73,8 @@ const Multis = ({ setGuesses }) => {
                     </Grid>
                 </Box>
             </CardContent>
-            <CardActions sx={{ justifyContent: 'space-between', p: 2}}>
+            <Divider />
+            <CardActions sx={{ justifyContent: 'space-between', p: 1}}>
 
                 <Button 
                     variant='outlined'

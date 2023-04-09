@@ -71,7 +71,6 @@ const FullStraight = ({ handlePickem, question }) => {
 
                 </Grid>
             </Box>
-            <Divider sx={{ width: '100%', mt: 2 }} />
         </Grid>
     )
 }

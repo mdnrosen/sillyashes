@@ -75,8 +75,9 @@ const HeadtoHead = ({ setGuesses }) => {
                     </Grid>
                 </Box>
             </CardContent>
+            <Divider />
             <CardActions
-                sx={{ justifyContent: 'flex-end', p: 2}}
+                sx={{ justifyContent: 'flex-end', p: 1}}
             >
                 <Button 
                     variant='contained'

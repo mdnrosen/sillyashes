@@ -1,6 +1,6 @@
 import React, { useState, useContext, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Box, Button, Card, CardActions, CardContent, CardHeader, Grid, IconButton, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Grid, IconButton, Typography } from '@mui/material'
 import { Help } from '@mui/icons-material'
 
 
@@ -28,12 +28,12 @@ const PickEm = ({ setGuesses }) => {
         setGuesses({...guesses, [questionName]: selected })
     },[])
 
-    
+
 
 
 
     return (
-        <Card>  
+        <Card sx={{ md: {m: 1} }}>
             <HelpModal
                 open={open}
                 toggle={toggle}
@@ -81,8 +81,9 @@ const PickEm = ({ setGuesses }) => {
                     </Grid>
                 </Box>
             </CardContent>
+            <Divider />
             <CardActions
-                sx={{ justifyContent: 'flex-end', p: 2}}
+                sx={{ justifyContent: 'space-between', p: 1}}
             >
                 <Button 
                     variant="outlined"
