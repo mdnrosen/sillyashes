@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Button, Card, CardActions, CardContent, CardHeader, Divider, IconButton, Item, List, ListItem, ListItemAvatar, Paper, ListItemIcon, ListItemText, Toolbar, Typography, Stack } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardActions, CardContent, CardHeader, Divider, IconButton, Item, List, ListItem, ListItemAvatar, Paper, ListItemIcon, ListItemText, Toolbar, Typography, Stack, TextField } from '@mui/material'
 import React from 'react'
 import { styled } from '@mui/material/styles';
 
@@ -21,41 +21,61 @@ import { checkRoundComplete } from '../helpers'
 
 const Summary = () => {
     return (
-        <Card>
-            <p>Welcome to the summary page</p>
-            {/* <CardHeader
-                sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">Summary</Typography>}
-            />
-            <CardContent>
-                <Toolbar>
-                    if all answers are answered, show the name input and save button
-                    <br></br>
-                    if not say 'there are some answers missing'
-                </Toolbar>
-                <OneSummary 
-                    round={roundOne} 
-                />
-                <TwoSummary
-                    round={roundTwo}
-                />               
-                <ThreeSummary
-                    round={roundThree}
-                />
-                <FourSummary
-                    round={roundFour}
-                />
-                <FiveSummary
-                    round={roundFive}
-                />
+        <>
+            <Card>
+                <CardHeader
+                    sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white'}}
+                    title={<Typography textAlign="left" variant="h5">Summary</Typography>}
+                    subheader={<Typography textAlign="left" variant="overline">Review and submit your answers</Typography>}
+                /> 
+            </Card>
+            <Toolbar>
+                <label>Submit your answers here</label>
+                <TextField />
+            </Toolbar>
+            <Card>
+                <CardHeader
+                    title={<Typography textAlign="left" variant="h5">Summary</Typography>}
+                    subheader={<Typography textAlign="left" variant="overline">Review and submit your answers</Typography>}
+                /> 
+            </Card>
+        
+        </>
+        // <Card>
+        //     <p>Welcome to the summary page</p>
+        //     {/* <CardHeader
+        //         sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
+        //         title={<Typography textAlign="left" variant="h5">Summary</Typography>}
+        //     />
+        //     <CardContent>
+        //         <Toolbar>
+        //             if all answers are answered, show the name input and save button
+        //             <br></br>
+        //             if not say 'there are some answers missing'
+        //         </Toolbar>
+        //         <OneSummary 
+        //             round={roundOne} 
+        //         />
+        //         <TwoSummary
+        //             round={roundTwo}
+        //         />               
+        //         <ThreeSummary
+        //             round={roundThree}
+        //         />
+        //         <FourSummary
+        //             round={roundFour}
+        //         />
+        //         <FiveSummary
+        //             round={roundFive}
+        //         />
        
 
 
-            </CardContent>
-            <CardActions>
-                <Button> Lock Answers</Button>
-            </CardActions> */}
-        </Card>
+        //     </CardContent>
+        //     <CardActions>
+        //         <Button> Lock Answers</Button>
+        //     </CardActions> */}
+        // </Card>
     )
 }
 
