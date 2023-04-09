@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import {IconButton,  Menu, MenuItem, Toolbar } from '@mui/material'
+import {IconButton, Divider, Menu, MenuItem, MenuList, Toolbar } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { Menu as BurgerMenu } from '@mui/icons-material'
 
@@ -15,8 +15,6 @@ const Navbar = () => {
     }
 
 
-
-    const toggle = () => setAnchorEl(null)
     const navItems = [
         {
             label: 'Round 1 - Head to Head',
@@ -71,12 +69,20 @@ const Navbar = () => {
             open={open}
             onClose={handleClose}
         >
-            {navItems.map(item =>
-                <MenuItem 
-                    key={item.label}
-                    onClick={() => handleNavigate(item.link)}
-                >{item.label}</MenuItem>    
-            )}
+            <MenuList>
+                <MenuItem onClick={() => handleNavigate('/')}>Home</MenuItem>
+                <Divider />
+                {navItems.map(item =>
+                    <MenuItem 
+                        key={item.label}
+                        onClick={() => handleNavigate(item.link)}
+                    >{item.label}</MenuItem>    
+                )}
+                <Divider />
+                <MenuItem onClick={() => handleNavigate('/summary')}>
+                    Summary
+                </MenuItem>
+            </MenuList>
         </Menu>
         </Toolbar>
     )
