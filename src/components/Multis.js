@@ -25,7 +25,7 @@ const Multis = ({ setGuesses }) => {
 
 
     return (
-        <Card sx={{ m: 1}}>
+        <Card>
             <HelpModal
                 open={open}
                 toggle={toggle}

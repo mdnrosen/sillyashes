@@ -54,9 +54,9 @@ function App() {
           {/* <Typography variant="h5">Silly Ashes</Typography> */}
     
         </Toolbar>
-          <Navbar />
 
         <BrowserRouter>
+          <Navbar />
           <ScrollToTop />
           <GuessContext.Provider value={guesses}>
           {/* <Progress current={step} /> */}

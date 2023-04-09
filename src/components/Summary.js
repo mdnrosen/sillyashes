@@ -22,8 +22,8 @@ import { checkRoundComplete } from '../helpers'
 const Summary = () => {
     return (
         <Card>
-
-            <CardHeader
+            <p>Welcome to the summary page</p>
+            {/* <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
                 title={<Typography textAlign="left" variant="h5">Summary</Typography>}
             />
@@ -54,7 +54,7 @@ const Summary = () => {
             </CardContent>
             <CardActions>
                 <Button> Lock Answers</Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
     )
 }
