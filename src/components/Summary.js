@@ -19,7 +19,7 @@ import { Edit, Close, Check } from '@mui/icons-material'
 import data from '../master.json'
 import { checkRoundComplete } from '../helpers'
 
-const Summary = ({ guesses }) => {
+const Summary = () => {
     return (
         <Card>
 

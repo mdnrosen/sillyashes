@@ -49,7 +49,7 @@ const Five_Summary = ({ round }) => {
                             />
                         </ListItem>
                         <Toolbar>
-                            <Stack direction="row" spacing={2}>
+                            <Stack direction="row" spacing={2} sx={{ p: 2}}>
                                 <Chip
                                     variant={guesses[q.name] === 'true' ? 'conatined' : 'outlined'}
                                     color={guesses[q.name] === 'true' ? 'primary' : 'default'}   

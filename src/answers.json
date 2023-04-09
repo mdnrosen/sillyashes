@@ -1,9 +1,11 @@
 {
     "h2h_wickets_eng" : "Jimmy Anderson",
-    "h2h_wickets_aus" : "Josh Hazlewood",
-    "h2h_catches" : "Josh Hazlewood",
-    "h2h_runs_eng" : "Jonny Bairstow",
+    "h2h_wickets_aus" : "Pat Cummins",
+    "h2h_wickets_pt": "Joe Root",
+    "h2h_catches" : "David Warner",
+    "h2h_runs_eng" : "Ben Stokes",
     "h2h_runs_aus" : "Steve Smith",
+    "h2h_runs_bowlers" : "Nathan Lyon",
     "h2h_reviews" : "Australia",
     "h2h_field" : "Australia",
 
@@ -15,11 +17,17 @@
     "num_elevenRuns" : "56",
 
   
-    "fifties": [
-        "Zak Crawley",
+    "tons": [
         "David Warner",
         "Marnus Labushagne",
         "Steve Smith",
+        "Ben Stokes",
+        "Rory Burns"
+    ],
+    "quack" : [
+        "David Warner",
+        "Cameron Green",
+        "Zak Crawley",
         "Joe Root",
         "Ollie Pope",
         "Ben Stokes",
@@ -28,13 +36,8 @@
         "Pat Cummins",
         "Stuart Broad"
     ],
-    "quack" : [
-        "David Warner",
-        "Cameron Green",
-        "Zak Crawley"
-    ],
 
-    "tenWickets" : [
+    "5fers" : [
         "Nathan Lyon",
         "Jack Leach",
         "Stuart Broad",

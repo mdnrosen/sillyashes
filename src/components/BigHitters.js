@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor } from '../helpers'
-import { Box, Chip, Divider,FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material'
+import { Box, Divider,FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 import { GuessContext } from '../App'
 
 const BigHitters = ({ handlePickem, question }) => {
@@ -21,7 +20,7 @@ const BigHitters = ({ handlePickem, question }) => {
 
     useEffect(() => {
         if (!Object.values(selected).length) return
-        handlePickem(selected, 'bigHitters', 14)
+        handlePickem(selected, 'bigHitters')
     },[selected])
 
 
@@ -34,7 +33,7 @@ const BigHitters = ({ handlePickem, question }) => {
             <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%'}}>
                 <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
                 <Typography variant="overline">{question.question}</Typography>
-                <Typography variant="caption"><i>{question.explainer}</i></Typography>
+                <Typography variant="caption"><i>{question.marks}</i></Typography>
                 {/* <Toolbar disableGutters >
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>
                         {Object.values(selected).map((player, i) => 

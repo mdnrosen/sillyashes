@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor } from '../helpers'
-import { Box, Checkbox, Chip, Divider, FormControlLabel, FormControl, InputLabel, Select, MenuItem, FormGroup, Grid, Radio, RadioGroup, Toolbar, Tooltip, Typography } from '@mui/material'
+import { Box, Divider, FormControl, InputLabel, Select, MenuItem, Grid, Typography } from '@mui/material'
 
 import { GuessContext } from '../App'
 
@@ -20,7 +19,7 @@ const FullStraight = ({ handlePickem, question }) => {
 
     useEffect(() => {
         if (!Object.values(selected).length) return
-        handlePickem(selected, 'fullStraight', 15)
+        handlePickem(selected, 'fullStraight')
     },[selected])
 
 
@@ -34,21 +33,8 @@ const FullStraight = ({ handlePickem, question }) => {
             <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%'}}>
                 <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
                 <Typography variant="overline">{question.question}</Typography>
-                <Typography variant="caption"><i>{question.explainer}</i></Typography>
-                {/* <Toolbar disableGutters >
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>
-                        {Object.values(selected).map((player, i) => 
-                            <Tooltip title={player} key={i}>
-                                <Chip
-                                    label={getAvatarName(player)}
-                                    sx={{ m: 0.5, color: 'white',   bgcolor: getBGColor(player, players)}}
-                                >    
-                                </Chip>
-                            </Tooltip>
-                        )}
-                    </Box>
-                    
-                </Toolbar> */}
+                <Typography variant="caption"><i>{question.marks}</i></Typography>
+
                 <Grid container spacing={2} sx={{ mt: 1}}>
                     <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>

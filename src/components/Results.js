@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardHeader, CardContent, List, Toolbar, Typography } from '@mui/material'
 import data from '../master.json'
 import H2H_Results from './results/H2H_Results'
@@ -8,7 +8,7 @@ const Results = ({ guesses }) => {
         <Card>
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">Summary</Typography>}
+                title={<Typography textAlign="left" variant="h5">Results</Typography>}
             />
             <CardContent>
                 <Toolbar>

@@ -1,29 +1,25 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 
-// import data from '../master.json'
+import data from '../master.json'
 
-import round from '../One.json'
 import HelpModal from './HelpModal'
 import { GuessContext } from '../App'
 
-const HeadtoHead = ({ setGuesses, setProgress }) => {
+const HeadtoHead = ({ setGuesses }) => {
     const guesses = useContext(GuessContext)
+    const getRoundQs = () => data.filter(d => d.roundNum === 1)
     const [ open, setOpen ] = useState(false)
-
-
     const toggle = () => setOpen(!open)
     const navigate = useNavigate()
+
+
+
     const handleChange = (e) => {
        setGuesses({...guesses, [e.target.name]: e.target.value})
     }
-
-    useEffect(() => {
-        setProgress(0)
-    })
-    
 
 
     return (
@@ -31,13 +27,13 @@ const HeadtoHead = ({ setGuesses, setProgress }) => {
             <HelpModal
                 open={open}
                 toggle={toggle}
-                hints={round.hints}
+                questions={getRoundQs().filter(q => q.help)}
             />
 
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
+                title={<Typography textAlign="left" variant="h5">Head to Head</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">+5 points for each correct</Typography>}
                 action={
                 <IconButton 
                     onClick={() => toggle()}
@@ -51,7 +47,7 @@ const HeadtoHead = ({ setGuesses, setProgress }) => {
             <CardContent>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
-                        {round.questions.map((q, i) =>
+                        {getRoundQs().map((q, i) =>
                             <Grid key={i} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>

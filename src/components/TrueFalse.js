@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormC
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import HelpModal from './HelpModal'
-import round from '../Five.json'
+import data from '../master.json'
 import { GuessContext } from '../App'
 
 
@@ -11,6 +11,7 @@ const TrueFalse = ({ setGuesses }) => {
     const guesses = useContext(GuessContext)
     const [ open, setOpen ] = useState(false)
     const toggle = () => setOpen(!open)
+    const getRoundQs = () => data.filter(d => d.roundNum === 5)
 
     const options = [{ value: true, label: 'True' },{ value: false, label: 'False'}]
     const navigate = useNavigate()
@@ -24,13 +25,12 @@ const TrueFalse = ({ setGuesses }) => {
             <HelpModal
                 open={open}
                 toggle={toggle}
-                hints={round.hints}
-                roundTitle="TrueFalse"
+                questions={getRoundQs().filter(q => q.help)}
             />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
+                title={<Typography textAlign="left" variant="h5">True or False</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">+5 for each correct</Typography>}
                 action={
                 <IconButton 
                     onClick={() => toggle()}
@@ -44,7 +44,7 @@ const TrueFalse = ({ setGuesses }) => {
             <CardContent>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
-                        {round.questions.map((q, i) =>
+                        {getRoundQs().map((q, i) =>
                             <Grid key={i} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>

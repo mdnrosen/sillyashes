@@ -4,7 +4,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Lis
 import { Close } from '@mui/icons-material'
 
 
-const HelpModal = ({ open, toggle, hints, roundTitle }) => {
+const HelpModal = ({ open, toggle, questions }) => {
     return (
         <Dialog 
             open={open}
@@ -14,15 +14,15 @@ const HelpModal = ({ open, toggle, hints, roundTitle }) => {
             </DialogTitle>
             <Divider />
             <DialogContent>
-                {hints.map((hint, i) =>
-                        <ListItem key={i}>
+                {questions.map((q, i) =>
+                        <ListItem key={q.name}>
                             <ListItemIcon>
-                                <Typography variant="h6">•</Typography>
+                                <Typography variant="h6">{`Q${q.num}`}</Typography>
 
                             </ListItemIcon>
                             <ListItemText 
-                                primary={<Typography variant="h6">{hint.q_num}</Typography>}
-                                secondary={<Typography variant="body1">{hint.text}</Typography>}
+                                // primary={<Typography variant="h6">{q.help}</Typography>}
+                                secondary={<Typography variant="body1">{q.help}</Typography>}
                             />
 
 

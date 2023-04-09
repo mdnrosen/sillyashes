@@ -39,7 +39,7 @@
             "round" : "Head to Head",
             "slug" : "head",
             "name": "h2h_wickets_aus",
-            "title": "Bigus Dickus",
+            "title": "P v J",
             "question" : "Who will take more wickets?",
             "options" : [{
                 "label" : "Pat Cummins",
@@ -65,7 +65,8 @@
             "name": "h2h_wickets_pt",
             "title": "Part timers",
             "question" : "Who will take more wickets?",
-            "options" : [{
+            "options" : 
+                [{
                 "label" : "Joe Root",
                 "value" : "Joe Root",
                 "team": "eng"
@@ -120,8 +121,8 @@
             "question" : "Who will score more runs?",
             "options" : [
                 {
-                    "label" : "Joe Root",
-                    "value" : "Joe Root",
+                    "label" : "Harry Brook",
+                    "value" : "Harry Brook",
                     "team": "eng"
 
                 },
@@ -160,7 +161,7 @@
                 }
             
             ],
-            "answer" : "Marnus Labuschagne"
+            "answer" : "Steve Smith"
         },    
         {
 
@@ -217,6 +218,6 @@
                 }
             
             ],
-            "answer" : "aus"
+            "answer" : "Australia"
         }]
 }

@@ -10,6 +10,8 @@ const Three_Summary = ({ round }) => {
     const guesses = useContext(GuessContext)
     const [ complete, setComplete ] = useState(false)
     useEffect(() => {
+        console.log('IN 3 summary')
+        console.log(round.questions, guesses)
         setComplete(roundComplete(round.questions, guesses))
     },[guesses])
     

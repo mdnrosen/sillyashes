@@ -11,6 +11,7 @@ import { GuessContext } from '../../App'
 const One_Summary = ({ round }) => {
     const guesses = useContext(GuessContext)
     const [ complete, setComplete ] = useState(false)
+    
     useEffect(() => {
         setComplete(roundComplete(round.questions, guesses))
     },[guesses])

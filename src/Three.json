@@ -23,7 +23,7 @@
             "title": "Rest & Rotate",
             "question" : "How many different players will play a test?",
             "answer" : "",
-            "name": "num_playersTOtal"
+            "name": "num_playersTotal"
     
         },          
          {

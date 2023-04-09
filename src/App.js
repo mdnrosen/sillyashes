@@ -1,15 +1,14 @@
 import './App.css';
-import React, { useState, useEffect, useCallback , createContext } from 'react'
+import React, { useState, useEffect, createContext } from 'react'
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Logo_Ashes from './assets/ashesLogo.png'
 import Logo_ECB from './assets/ecbLogo.png'
 import Logo_CA from './assets/ausLogo.png'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 
-import { Box, Container, Divider, LinearProgress, Toolbar } from '@mui/material'
+import { Box, Container, Toolbar } from '@mui/material'
 
 import Home from './components/Home'
 import Navbar from './components/Navbar';
@@ -24,38 +23,26 @@ import NotFound from './components/NotFound';
 import theme from './theme'
 
 import defaultState from './defaultState.json'
-import dummyAnswers from './dummyAnswers.json'
 import ScrollToTop from './components/ScrollToTop'
 export const GuessContext = createContext([])
 
 function App() {
+  const [ guesses, setGuesses ] = useStickyState(defaultState, 'sillyAshes')
 
 
   function useStickyState(defaultVal, key) {
     const [ value, setValue ] = useState(() => {
       const stickyVal = window.localStorage.getItem(key)
-      return stickyVal !== null ? JSON.parse(stickyVal) : defaultVal
-    })
-
-
-
-    
-
-
-    const handleProgress = useCallback(() => {
-      setProgress((p => p))
-    })
+        return stickyVal !== null ? JSON.parse(stickyVal) : defaultVal
+      })
 
     useEffect(() => {
       window.localStorage.setItem(key, JSON.stringify(value))
     }, [key, value])
-
     return [ value, setValue ]
   }
   
-  const [ guesses, setGuesses ] = useStickyState(defaultState, 'sillyAshes')
-  const [ progress, setProgress]  = useState(4)
-  const [ step, setStep] = useState(1)
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -75,13 +62,13 @@ function App() {
           {/* <Progress current={step} /> */}
             <Routes>
 
-              <Route path="/head" element={<HeadtoHead guesses={guesses} setGuesses={setGuesses} setProgress={setProgress} />} />
-              <Route path="/pick" element={<PickEm guesses={guesses} setGuesses={setGuesses}  />} />
-              <Route path="/numbers" element={<Numbers guesses={guesses} setGuesses={setGuesses} />} />
-              <Route path="/multi" element={<Multis guesses={guesses} setGuesses={setGuesses} />} />
-              <Route path="/truefalse" element={<TrueFalse guesses={guesses} setGuesses={setGuesses}  />} />
-              <Route path="/summary" element={<Summary guesses={guesses}/>} />
-              <Route path="/results" element={<Results guesses={guesses}/>} />
+              <Route path="/head" element={<HeadtoHead setGuesses={setGuesses} />} />
+              <Route path="/pick" element={<PickEm setGuesses={setGuesses}  />} />
+              <Route path="/numbers" element={<Numbers setGuesses={setGuesses} />} />
+              <Route path="/multi" element={<Multis setGuesses={setGuesses} />} />
+              <Route path="/truefalse" element={<TrueFalse setGuesses={setGuesses}  />} />
+              <Route path="/summary" element={<Summary />} />
+              <Route path="/results" element={<Results />} />
               <Route exact path="/" element={<Home />} />
               <Route path="/*" element={<NotFound />} />
 

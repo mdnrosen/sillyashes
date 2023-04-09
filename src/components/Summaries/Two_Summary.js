@@ -51,13 +51,13 @@ const Two_Summary = ({ round }) => {
                         </ListItem>
                             <Toolbar>
                                 <Stack direction="row" spacing={1}>
-                                    {/* {guesses[q.name] ? guesses[q.name].map((guess, i) => 
+                                    {guesses[q.name].map((guess, i) => 
                                         <Chip
                                             color="primary"
                                             label={guess}
                 
                                         ></Chip>
-                                    ) : null} */}
+                                    )}
                                 </Stack>
                         
                             </Toolbar>

@@ -1,44 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Grid, IconButton, Typography } from '@mui/material'
 import { Help } from '@mui/icons-material'
 
 
-import round from '../Two.json'
+import data from '../master.json'
 import Hundreds from './Hundreds'
 import Quack from './Quack'
 import FiveWickets from './FiveWickets'
 import BigHitters from './BigHitters'
 import FullStraight from './FullStraight'
 import HelpModal from './HelpModal'
+import { GuessContext } from '../App'
 
 
-const PickEm = ({ guesses, setGuesses }) => {
+const PickEm = ({ setGuesses }) => {
+    const guesses = useContext(GuessContext)
+    const getRoundQs = () => data.filter(d => d.roundNum === 2)
+
     const [ open, setOpen ] = useState(false)
     const toggle = () => setOpen(!open)
 
     const navigate = useNavigate()
-    const handlePickem = (selected, questionName) => {
-        setGuesses({...guesses, [questionName]: selected })
-    }
 
-    // const handleSelects = (selected, questionName) => {
-    //     setGuesses
-    // }
+
+    const handlePickem = useCallback((selected, questionName) => {
+        setGuesses({...guesses, [questionName]: selected })
+    },[])
+
+    
 
 
 
     return (
-        <Card>
+        <Card>  
             <HelpModal
                 open={open}
                 toggle={toggle}
-                hints={round.hints}
+                questions={getRoundQs().filter(q => q.help)}
             />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
+                title={<Typography textAlign="left" variant="h5">Round 2 - Pick 'Em</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">Points are different for each question</Typography>}
                 action={
                 <IconButton 
                     onClick={() => toggle()}
@@ -52,25 +56,25 @@ const PickEm = ({ guesses, setGuesses }) => {
                     <Grid container spacing={3}>
                         <Hundreds 
                             handlePickem={handlePickem}
-                            question={round.questions.find(q => q.name === 'tons')}
+                            question={getRoundQs().find(q => q.name === 'tons')}
                         />    
                         <Quack 
                             handlePickem={handlePickem}
-                            question={round.questions.find(q => q.name === 'quack')}
+                            question={getRoundQs().find(q => q.name === 'quack')}
                         />      
                  
                          <FiveWickets 
                             handlePickem={handlePickem}
-                            question={round.questions.find(q => q.name === '5fers')}
+                            question={getRoundQs().find(q => q.name === '5fers')}
                         />                       
                         <BigHitters 
                             handlePickem={handlePickem}
-                            question={round.questions.find(q => q.name === 'bigHitters')}
+                            question={getRoundQs().find(q => q.name === 'bigHitters')}
 
                         />                      
                         <FullStraight 
                             handlePickem={handlePickem}
-                            question={round.questions.find(q => q.name === 'fullStraight')}
+                            question={getRoundQs().find(q => q.name === 'fullStraight')}
 
                         />
 

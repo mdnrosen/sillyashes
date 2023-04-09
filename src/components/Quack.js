@@ -45,7 +45,7 @@ const Quack = ({ handlePickem, question }) => {
             <Box sx={{ display: 'flex', flexDirection: 'column'}}>
                 <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
                 <Typography variant="overline">{question.question}</Typography>
-                <Typography variant="caption"><i>{question.explainer}</i></Typography>
+                <Typography variant="caption"><i>{question.marks}</i></Typography>
 
                 <Toolbar disableGutters >
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>

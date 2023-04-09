@@ -3,13 +3,14 @@ import React, { useState, useContext } from 'react'
 import { Help } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 
-import round from '../Four.json'
 
+import data from '../master.json'
 import HelpModal from './HelpModal'
 import { GuessContext } from '../App'
 const Multis = ({ setGuesses }) => {
     const [ open, setOpen ] = useState(false)
     const guesses = useContext(GuessContext)
+    const getRoundQs = () => data.filter(d => d.roundNum === 4)
 
 
     const toggle = () => setOpen(!open)
@@ -28,13 +29,12 @@ const Multis = ({ setGuesses }) => {
             <HelpModal
                 open={open}
                 toggle={toggle}
-                hints={round.hints}
-                roundTitle="Randoms"
+                questions={getRoundQs().filter(q => q.help)}
             />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-                title={<Typography textAlign="left" variant="h5">{round.name}</Typography>}
-                subheader={<Typography textAlign="left" variant="overline">{round.marking}</Typography>}
+                title={<Typography textAlign="left" variant="h5">Randoms</Typography>}
+                subheader={<Typography textAlign="left" variant="overline">+5 points for each correct</Typography>}
                 action={
                 <IconButton 
                     onClick={() => toggle()}
@@ -48,8 +48,8 @@ const Multis = ({ setGuesses }) => {
             <CardContent>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
-                        {round.questions.map((q, i) =>
-                            <Grid key={i} item xs={12}>
+                        {getRoundQs().map((q, i) =>
+                            <Grid key={q.name} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
                                     <Typography variant="overline">{q.question}</Typography>
@@ -60,7 +60,7 @@ const Multis = ({ setGuesses }) => {
                                             control={
                                                 <Radio 
                                                     id={q.num} 
-                                                    value={opt.value} 
+                                                    value={opt.value.toString()} 
                                                     checked={guesses[q.name] && guesses[q.name].includes(opt.value)}
                                                 />
                                             }

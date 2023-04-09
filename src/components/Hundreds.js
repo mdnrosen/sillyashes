@@ -11,12 +11,17 @@ import { GuessContext } from '../App'
 const Hundreds = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
     const [ selected, setSelected ] = useState([])
+
+
+
     const handleChange = (e) => {
         const { value, checked } = e.target
         setSelected(prevState => 
             checked ? [...prevState, e.target.value] : 
             prevState.filter(val => val !== value))
     }
+
+
     useEffect(() => {
         if (!selected.length) return
         handlePickem(selected, 'tons')
@@ -54,7 +59,7 @@ const Hundreds = ({ handlePickem, question }) => {
             <Box sx={{ display: 'flex', flexDirection: 'column'}}>
                     <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
                     <Typography variant="overline">{question.question}</Typography>
-                    <Typography variant="caption"><i>{question.explainer}</i></Typography>
+                    <Typography variant="caption"><i>{question.marks}</i></Typography>
                     <Toolbar disableGutters >
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1 }}>
                             {selected.map((player, i) => 
