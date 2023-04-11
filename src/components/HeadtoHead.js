@@ -23,7 +23,7 @@ const HeadtoHead = ({ setGuesses }) => {
 
 
     return (
-        <Card sx={{ md: {m: 1} }}>
+        <Card sx={{ md: {my: 1} }}>
             <HelpModal
                 open={open}
                 toggle={toggle}
@@ -49,11 +49,12 @@ const HeadtoHead = ({ setGuesses }) => {
                     <Grid container spacing={3}>
                         {getRoundQs().map((q, i) =>
                             <Grid key={i} item xs={12}>
-                                <RadioGroup>
+                                <RadioGroup sx={{ mb: 1}}> 
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
-                                    <Typography variant="overline">{q.question}</Typography>
+                                    <Typography variant="body2">{q.question}</Typography>
                                     {q.options.map((opt, i) => {
                                         return (
+                                            
                                         <FormControlLabel
                                             key={i}
                                             name={q.name}
@@ -69,6 +70,7 @@ const HeadtoHead = ({ setGuesses }) => {
                                         ) 
                                     })}
                                 </RadioGroup>
+
                             </Grid>
                             
                         )}

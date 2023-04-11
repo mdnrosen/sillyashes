@@ -3,13 +3,9 @@ import React from 'react'
 import { styled } from '@mui/material/styles';
 
 import { useNavigate } from 'react-router-dom'
-import roundOne from '../One.json'
-import roundTwo from '../Two.json'
-import roundThree from '../Three.json'
-import roundFour from '../Four.json'
-import roundFive from '../Five.json'
 
-import OneSummary from './Summaries/One_Summary';
+
+import Radio_Summary from './Summaries/Radio_Summary';
 import TwoSummary from './Summaries/Two_Summary';
 import ThreeSummary from './Summaries/Three_Summary';
 import FourSummary from './Summaries/Four_Summary';
@@ -22,60 +18,44 @@ import { checkRoundComplete } from '../helpers'
 const Summary = () => {
     return (
         <>
-            <Card>
+            {/* <Card>
                 <CardHeader
                     sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white'}}
                     title={<Typography textAlign="left" variant="h5">Summary</Typography>}
                     subheader={<Typography textAlign="left" variant="overline">Review and submit your answers</Typography>}
                 /> 
-            </Card>
+            </Card> */}
             <Toolbar>
+                <Typography variant="h5">Summary</Typography>
+            </Toolbar>
+            <Divider />
+            <Toolbar sx={{ m: 1}}>
                 <label>Submit your answers here</label>
                 <TextField />
             </Toolbar>
-            <Card>
-                <CardHeader
-                    title={<Typography textAlign="left" variant="h5">Summary</Typography>}
-                    subheader={<Typography textAlign="left" variant="overline">Review and submit your answers</Typography>}
-                /> 
-            </Card>
+            <Divider />
         
+            <Radio_Summary 
+                questions={data.filter(d => d.roundNum === 1)}
+                title="Round 1 - Head to Head"
+                roundPath="/head"
+
+            />
+            <Radio_Summary 
+                questions={data.filter(d => d.roundNum === 4)}
+                title="Round 4 - Randoms"
+                roundPath="/multi"
+
+            />
+            <Radio_Summary 
+                questions={data.filter(d => d.roundNum === 5)}
+                title="Round 5 - True or False"
+                roundPath="/truefalse"
+
+            />
+
         </>
-        // <Card>
-        //     <p>Welcome to the summary page</p>
-        //     {/* <CardHeader
-        //         sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
-        //         title={<Typography textAlign="left" variant="h5">Summary</Typography>}
-        //     />
-        //     <CardContent>
-        //         <Toolbar>
-        //             if all answers are answered, show the name input and save button
-        //             <br></br>
-        //             if not say 'there are some answers missing'
-        //         </Toolbar>
-        //         <OneSummary 
-        //             round={roundOne} 
-        //         />
-        //         <TwoSummary
-        //             round={roundTwo}
-        //         />               
-        //         <ThreeSummary
-        //             round={roundThree}
-        //         />
-        //         <FourSummary
-        //             round={roundFour}
-        //         />
-        //         <FiveSummary
-        //             round={roundFive}
-        //         />
-       
 
-
-        //     </CardContent>
-        //     <CardActions>
-        //         <Button> Lock Answers</Button>
-        //     </CardActions> */}
-        // </Card>
     )
 }
 

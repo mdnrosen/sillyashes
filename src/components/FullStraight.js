@@ -32,7 +32,7 @@ const FullStraight = ({ handlePickem, question }) => {
         <Grid item xs={12}>
             <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%'}}>
                 <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
-                <Typography variant="overline">{question.question}</Typography>
+                <Typography variant="body2">{question.question}</Typography>
                 <Typography variant="caption"><i>{question.marks}</i></Typography>
 
                 <Grid container spacing={2} sx={{ mt: 1}}>

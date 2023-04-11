@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect, createContext } from 'react'
 
-
+import Logo from './assets/sillashesLogo.png'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Logo_ECB from './assets/ecbLogo.png'
 import Logo_CA from './assets/ausLogo.png'
@@ -48,10 +48,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { sx: 1, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
-        <Toolbar sx={{ justifyContent: 'space-between', p: { xs: 1, sm: 2 }}} >
-          <Box component="img" src={Logo_ECB} height={50} />
+        <Toolbar sx={{ borderBottom: '2px solid black',justifyContent: 'space-between', p: { xs: 1, sm: 1 }}} >
+          <Box component="img" src={Logo_ECB} height={40} />
+          <Box component="img" src={Logo} height={40} />
           {/* <Box component="img" src={Logo_Ashes} height={50} /> */}
-          <Box component="img" src={Logo_CA} height={50} />
+          <Box component="img" src={Logo_CA} height={40} />
           {/* <Typography variant="h5">Silly Ashes</Typography> */}
     
         </Toolbar>

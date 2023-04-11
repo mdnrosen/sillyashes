@@ -52,9 +52,10 @@ const Multis = ({ setGuesses }) => {
                             <Grid key={q.name} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
-                                    <Typography variant="overline">{q.question}</Typography>
+                                    <Typography sx={{ mb: 1}}variant="body1">{q.question}</Typography>
                                     {q.options.map((opt, i) =>
                                         <FormControlLabel
+                                      
                                             key={i}
                                             name={q.name}
                                             control={

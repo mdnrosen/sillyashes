@@ -14,39 +14,22 @@ exports.getBGColor = (name, players) => {
 
 
 exports.roundComplete = (questions, guesses) => {
+    // the anomoly is the bigHitters and fullStraight quetsion where the defauilt state is an object
+    const g_names = Object.keys(guesses)
 
-    // IVE REALLY COCKED THIS BIT UP, I THINK I NEED TO REFACTOR ALL THE ROUNDS BEFORE WE LOOK TO BUILD OUT THE SUMMARY PAGE
-
-
-
-    // const roundLength = questions.length
-    // let complete = 0
-    // const keys = Object.keys(guesses)
-
-    // for (let i = 0; i < keys.length; i++) {
-    //     console.log(guesses[keys[i]].length)
-    //     if (guesses[keys[i]].length) complete++
-    // }
-
-    // if (roundLength === complete) {
-    //     return true
-    // } else {
-    //     return false
-    // }
-
-    
+    questions.forEach(q => {
+        console.log(guesses[q.name])
+    })
 
 
 
-    // // this no doesn't work becauae we're checking keys of default state so it's always true
-    // const answered = Object.keys(guesses)
- 
-    // const matches = questions.filter(q => answered.includes(q.name))
-    // const length = questions.length
-    // if (matches.length === length) {
-    //     return true
-    // } else {
-    //     return false
-    // }
-
+    const matches = Object.keys(guesses).filter(g => questions.includes(g))
+    return 'Errrr, I dunno.'
 }   
+
+
+exports.questionAnswered = (question, guesses) => {
+
+    console.log(guesses[question.name].length ? true : false)
+    return guesses[question.name].length ? true : false
+}

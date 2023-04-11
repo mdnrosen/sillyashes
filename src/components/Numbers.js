@@ -45,8 +45,9 @@ const Numbers = ({ setGuesses }) => {
                             <Grid item xs={12} sx={{ mb: 2}} key={i}>
                                 <FormControl sx={{ width: { xs: '100%', sm: '50%'}}}>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
-                                    <Typography variant="overline">{q.question}</Typography>
+                                    <Typography variant="body1">{q.question}</Typography>
                                     <TextField 
+                                        margin="normal"
                                         defaultValue={guesses[q.name] ? guesses[q.name] : ''}
                                         name={q.name} 
                                         id={q.num.toString()} 
@@ -55,7 +56,7 @@ const Numbers = ({ setGuesses }) => {
                                 </FormControl>
                             </Grid>
                             
-                        )}
+                            )}
                     </Grid>
                 </Box>
             </CardContent>

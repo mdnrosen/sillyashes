@@ -547,7 +547,17 @@
         "question" : "England will choose to bowl every time they win a toss.",
         "name": "tf_chase",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
     },         
     {
         "num" : 27,
@@ -555,7 +565,17 @@
         "question" : "Jofra Archer will play at least ONE test.",
         "name": "tf_jofra",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },          
     {
@@ -564,7 +584,17 @@
         "question" : "England will take 20 wickets in EVERY test.",
         "name": "tf_20wickets",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },            
     {
@@ -574,7 +604,17 @@
         "help" : "In any scenario",
         "name": "tf_nighthawk",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },            
     {
@@ -584,7 +624,17 @@
         "help" : "Out of the team, not down the order",
         "name": "tf_batterDrop",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },             
     {
@@ -593,7 +643,17 @@
         "question" : "Any opener (for either team) will score more runs than Rory Burns in 2019 (390).",
         "name": "tf_moreThanBurns",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },            
     {
@@ -602,7 +662,17 @@
         "question" : "England will score 175+ in a session",
         "name": "tf_bazBall",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },           
     {
@@ -611,7 +681,17 @@
         "question" : "Jack Leach will play all FIVE tests.",
         "name": "tf_leachy",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },             
     {
@@ -621,7 +701,17 @@
         "name": "tf_rootTon",
         "roundName" : "True or False",
         "roundNum" : 5,
-        "answer": true
+        "answer": "true",
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     },          
     {
@@ -631,7 +721,17 @@
         "question" : "The Ashes will be decided before the 5th Test.",
         "name": "tf_decided",
         "roundName" : "True or False",
-        "roundNum" : 5
+        "roundNum" : 5,
+        "options" : [
+            {
+                "label" : "True",
+                "value" : "true"
+            },
+            {
+                "label" : "False",
+                "value" : "false"
+            }
+        ]
 
     }  
 

@@ -48,8 +48,8 @@ const TrueFalse = ({ setGuesses }) => {
                             <Grid key={i} item xs={12}>
                                 <RadioGroup>
                                     <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
-                                    <Typography variant="overline">{q.question}</Typography>
-                                    {options.map((opt, i) =>
+                                    <Typography sx={{ mb: 1}}variant="body1">{q.question}</Typography>
+                                    {q.options.map((opt, i) =>
                                         <FormControlLabel
                                             key={i}
                                             name={q.name}
