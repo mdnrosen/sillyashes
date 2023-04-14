@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Box, Chip, Collapse, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Stack, Toolbar, Typography} from '@mui/material'
+import { Box, Collapse, Chip, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandLess, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { questionAnswered } from '../../helpers'
 import { GuessContext } from '../../App'
+
+import players from '../../players.json'
 
 
 
@@ -15,6 +17,15 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
 
     const navigate = useNavigate()
 
+    const getOptions = (key) => {
+        if (key === 'all') {
+            return players
+        } else {
+            return players.filter(p => p[key])
+        }
+
+    }
+
     useEffect(() => {
         // Default state is true, if ONE is false, then it overwrites the compelte state to false
         questions.forEach(q => {
@@ -22,6 +33,25 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             if (!result) setComplete(false)
         })
     },[guesses])
+
+
+    console.log('QUESTIONS', questions)
+
+
+    const renderChosen = (q) => {
+        // these are an object so need to be handled separately 
+        if (q.name === 'bigHitters' || q.name === 'fullStraight') {
+            return (
+                <p>Hello dererere</p>
+            )
+        } else {
+            // its an array, so return what was guesses
+            // if theres no guesses yet, just reutn a p tag of 'You have nothing here yet'
+        }
+
+    
+    }
+
 
 
     return (
@@ -76,20 +106,32 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                                 </ListItem>
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
-                                {q.options.map(opt => {
-                                    console.log('opt val', opt.value)
-                                    const chosen = guesses[q.name] === opt.value
-                                    return (
-                                        <Chip 
-                                            key={opt.value}
-                                            variant={chosen ? 'contained' : 'outlined'}
-                                            color={chosen ? 'primary' : 'default'}
-                                            sx={{ m: 1 }}
-                                            label={opt.label} 
-        
-                                        />
+                            {/* MIGHT NEED TO ADD A SEPARATE CATCH FOR THE BIG HITTERS AND FULL STRAIGHT QUESTIONS */}
+                                {renderChosen(q)}
+                                {getOptions(q.options).map(opt => { 
+                                    const chosen = guesses[q.name] === opt.name
 
-                                    )
+
+                                    if (q.name === 'bigHitters' || q.name === 'fullStraight') {
+                                        return (
+                                            <Chip label={q.name}/>
+                                        )
+                                    } else {
+                                        return guesses[q.name].length ?
+                                            <p>You haven't completed this question yet</p>
+                                            :
+                                      
+                                            <Chip 
+                                                key={opt.value}
+                                                variant={chosen ? 'contained' : 'outlined'}
+                                                color={chosen ? 'primary' : 'default'}
+                                                sx={{ m: 1 }}
+                                                label={opt.name} 
+            
+                                            />
+    
+                                        
+                                    }
                                 }
                                 )}
                             </Toolbar>

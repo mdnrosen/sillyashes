@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.summaryListItem:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  
+}

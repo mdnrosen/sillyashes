@@ -225,7 +225,7 @@
         "help" : "David Warner in 2019 got 3, so that would be 9 points",
         "marks" : "+3 for each duck",
         "question" : "Pick THREE top 7 batters who will get ducks.",
-        "options" : "batters"
+        "options" : "batter"
     },        
     {
         "num" : 11,
@@ -235,7 +235,7 @@
         "title" : "5-fers!",
         "marks" : "+5 for each correct, -3 for each incorrect or missed",
         "question" : "Pick EVERY bowler who will take a 5fer",
-        "options" : "bowlers"
+        "options" : "bowler"
     },
     {
         "num" : 12,
@@ -258,12 +258,12 @@
         "help" : "Points for each dismissal",
         "marks" : "+2 for each bowled or LBW dismissal",
         "question" : "Pick ONE bowler from each team who will take the most wickets bowled or LBW.",
-        "options" : "bowlers"
+        "options" : "bowler"
     },
     {
         "num" : 14,
         "roundName": "Pick Em",
-        "roundNum" : 2,
+        "roundNum" : 3,
         "help": "Picked in the starting XI or a concussion sub",
         "title": "Rest & Rotate",
         "question" : "How many different players will play a test?",
