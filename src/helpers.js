@@ -17,9 +17,9 @@ exports.roundComplete = (questions, guesses) => {
     // the anomoly is the bigHitters and fullStraight quetsion where the defauilt state is an object
     const g_names = Object.keys(guesses)
 
-    questions.forEach(q => {
-        console.log(guesses[q.name])
-    })
+    // questions.forEach(q => {
+    //     console.log(guesses[q.name])
+    // })
 
 
 
@@ -29,7 +29,5 @@ exports.roundComplete = (questions, guesses) => {
 
 
 exports.questionAnswered = (question, guesses) => {
-
-    console.log(guesses[question.name].length ? true : false)
     return guesses[question.name].length ? true : false
 }

@@ -5,6 +5,7 @@ import React from 'react'
 
 import RadioSummary from './Summaries/Radio_Summary';
 import CheckboxSummary from './Summaries/Checkbox_Summary'
+import NumberSummary from './Summaries/NumberSummary'
 import data from '../master.json'
 
 const Summary = () => {
@@ -29,7 +30,13 @@ const Summary = () => {
             <CheckboxSummary 
                 questions={data.filter(d => d.roundNum === 2)}
                 title="Round 2 - Pick 'Em"
-                roundPath="/pickem"
+                roundPath="/pick"
+            />
+
+            <NumberSummary 
+                questions={data.filter(d => d.roundNum === 3)}
+                title="Round 3 - Numbers"
+                roundPath="/numbers"
             />
 
             <RadioSummary 
