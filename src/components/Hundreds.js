@@ -23,7 +23,6 @@ const Hundreds = ({ handlePickem, question }) => {
 
 
     useEffect(() => {
-        if (!selected.length) return
         handlePickem(selected, 'tons')
     },[selected])
 

@@ -21,7 +21,6 @@ const Quack = ({ handlePickem, question }) => {
     }
 
     useEffect(() => {
-        if (!selected.length) return
         handlePickem(selected, 'quack', 12)
     },[selected])
 

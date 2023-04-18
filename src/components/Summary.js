@@ -1,4 +1,4 @@
-import { Divider, Toolbar, Typography, TextField } from '@mui/material'
+import { Box, Divider, Toolbar, Typography, TextField, Button } from '@mui/material'
 import React, { useState, useEffect, useContext } from 'react'
 
 
@@ -34,9 +34,14 @@ const Summary = () => {
             <Divider />
             <Toolbar sx={{ p: 3, background: '#add8e680', display: 'flex', justifyContent: 'center' }}>
                 {complete ? 
+                    <Box component="div">
+                        <TextField fullWidth />
+                        <Button fullWidth variant="contained" color="primary">Submit Answers</Button>
+
+
+                    </Box>
                 
                     
-                <TextField />
                 
                 : <Typography variant="body1">
                     Finish answering all questions before submitting

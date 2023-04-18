@@ -54,7 +54,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                         {questions.map(q => 
                             <>
                                 <ListItem className="summaryListItem" key={q.name}>
-            
                                     <ListItemText 
                                         primary={
                                             <Typography variant="h6">
@@ -80,16 +79,13 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                                     const chosen = guesses[q.name] === opt.value
                                     return (
                                         <Chip 
-                                            key={i}
+                                            key={`${i}${q.name}`}
                                             variant={chosen ? 'contained' : 'outlined'}
                                             color={chosen ? 'primary' : 'default'}
                                             sx={{ m: 1 }}
                                             label={opt.label} 
-        
                                         />
-
-                                    )
-                                }
+                                    )}
                                 )}
                             </Toolbar>
                             <Divider />

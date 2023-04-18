@@ -13,8 +13,6 @@ const BigHitters = ({ handlePickem, question }) => {
 
     const handleChange = (e) => {
         const { value, name  } = e.target
-
-        console.log('name changing ->', name)
         setSelected({...selected, [name]: value})
     }
 

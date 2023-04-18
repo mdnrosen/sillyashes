@@ -24,9 +24,9 @@ const PickEm = ({ setGuesses }) => {
     const navigate = useNavigate()
 
 
-    const handlePickem = useCallback((selected, questionName) => {
+    const handlePickem = (selected, questionName) => {
         setGuesses({...guesses, [questionName]: selected })
-    },[])
+    }
 
 
 

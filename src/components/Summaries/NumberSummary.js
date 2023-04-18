@@ -49,9 +49,9 @@ const NumberSummary = ({ questions, title, roundPath}) => {
                 </Toolbar>
                 <Collapse in={open}>
                     <List>
-                        {questions.map(q => 
+                        {questions.map((q, i) => 
                             <>
-                                <ListItem className="summaryListItem" key={q.name}>
+                                <ListItem className="summaryListItem" key={`${i}${q.name}`}>
                                     <ListItemText 
                                         primary={
                                             <Typography variant="h6">
