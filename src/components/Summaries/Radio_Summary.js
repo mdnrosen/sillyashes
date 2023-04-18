@@ -76,11 +76,11 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                                 </ListItem>
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
-                                {q.options.map(opt => {
+                                {q.options.map((opt, i) => {
                                     const chosen = guesses[q.name] === opt.value
                                     return (
                                         <Chip 
-                                            key={opt.value}
+                                            key={i}
                                             variant={chosen ? 'contained' : 'outlined'}
                                             color={chosen ? 'primary' : 'default'}
                                             sx={{ m: 1 }}
