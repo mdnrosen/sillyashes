@@ -13,21 +13,12 @@ exports.getBGColor = (name, players) => {
 
 
 
-exports.roundComplete = (questions, guesses) => {
-    // the anomoly is the bigHitters and fullStraight quetsion where the defauilt state is an object
-    const g_names = Object.keys(guesses)
-
-    // questions.forEach(q => {
-    //     console.log(guesses[q.name])
-    // })
-
-
-
-    const matches = Object.keys(guesses).filter(g => questions.includes(g))
-    return 'Errrr, I dunno.'
-}   
-
 
 exports.questionAnswered = (question, guesses) => {
-    return guesses[question.name].length ? true : false
+    if (question.name === 'bigHitters' || question.name === 'fullStraight') {
+        const answers = Object.values(guesses[question.name])
+        return answers.length === 2 ? true : false
+    } else {
+        return guesses[question.name].length ? true : false
+    }
 }

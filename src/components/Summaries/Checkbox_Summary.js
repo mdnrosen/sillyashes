@@ -5,10 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { questionAnswered } from '../../helpers'
 import { GuessContext } from '../../App'
 
-import players from '../../players.json'
-
-
-
 
 const Radio_Summary = ({ questions, title, roundPath }) => {
     const guesses = useContext(GuessContext)
@@ -17,14 +13,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
 
     const navigate = useNavigate()
 
-    // const getOptions = (key) => {
-    //     if (key === 'all') {
-    //         return players
-    //     } else {
-    //         return players.filter(p => p[key])
-    //     }
-
-    // }
 
     useEffect(() => {
         // Default state is true, if ONE is false, then it overwrites the compelte state to false
@@ -32,7 +20,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
         })
-    },[guesses])
+    },[guesses, questions])
 
     const renderChosen = (q) => {
         // these are an object so need to be handled separately 

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Box, Chip, Collapse, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Stack, Toolbar, Typography} from '@mui/material'
+import { Box, Chip, Collapse, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandLess, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { questionAnswered } from '../../helpers'
@@ -21,7 +21,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
         })
-    },[guesses])
+    },[guesses, questions])
 
 
     return (
@@ -77,7 +77,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
                                 {q.options.map(opt => {
-                                    console.log('opt val', opt.value)
                                     const chosen = guesses[q.name] === opt.value
                                     return (
                                         <Chip 

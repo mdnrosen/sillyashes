@@ -1,6 +1,6 @@
 
 import React, { useContext, useState, useEffect } from 'react'
-import { Box, Chip, Collapse, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Stack, Toolbar, Typography} from '@mui/material'
+import { Box, Chip, Collapse, Divider, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Paper, Toolbar, Typography} from '@mui/material'
 import { Edit, ExpandLess, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { questionAnswered } from '../../helpers'
@@ -22,7 +22,10 @@ const NumberSummary = ({ questions, title, roundPath}) => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
         })
-    },[guesses])
+    },[guesses, questions])
+
+
+
     return (
         <Paper elevation={2}>
             <Box component="div">
