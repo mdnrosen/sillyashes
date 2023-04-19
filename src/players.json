@@ -97,15 +97,27 @@
     },
     {
         "team" : "Australia",
-        "name" : "David Warner",
+        "name" : "Pat Cummins",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "Australia",
+        "name" : "Scott Boland",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "Australia",
+        "name" : "Alex Carey",
         "batter" : true,
         "bowler" : false
     },
     {
         "team" : "Australia",
-        "name" : "Cameron Bancroft",
+        "name" : "Cameron Green",
         "batter" : true,
-        "bowler" : false
+        "bowler" : true
     },
     {
         "team" : "Australia",
@@ -115,88 +127,75 @@
     },
     {
         "team" : "Australia",
-        "name" : "Usman Khawaja",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "Australia",
-        "name" : "Marnus Labushagne",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "Steve Smith",
-        "batter" : true,
+        "name" : "Josh Hazlewood",
+        "batter" : false,
         "bowler" : true
     },
     {
         "team" : "Australia",
         "name" : "Travis Head",
         "batter" : true,
-        "bowler" : false
+        "bowler" : true
     },
     {
-        "team" : "Australia",   
-        "name" : "Matthew Wade",
+        "team" : "Australia",
+        "name" : "Josh Inglis",
         "batter" : true,
         "bowler" : false
     },
     {
         "team" : "Australia",
-        "name" : "Tim Paine",
-        "batter" : true,
-        "bowler" : false
+        "name" : "Usman Khawaja",
+        "batter": true,
+        "bowler" : false 
     },
     {
         "team" : "Australia",
-        "name" : "Mitchell Marsh",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "Pat Cummins",
-        "batter" : false,
-        "bowler" : true
-    },   
-    {
-        "team" : "Australia",
-        "name" : "Mitchell Starc",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "James Pattinson",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "Michael Neser",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "Australia",
-        "name" : "Peter Siddle",
-        "batter" : false,
-        "bowler" : true
+        "name" : "Marnus Labuschagne",
+        "batter": true,
+        "bowler" : true 
     },
     {
         "team" : "Australia",
         "name" : "Nathan Lyon",
-        "batter" : false,
+        "batter": false,
         "bowler" : true
     },
     {
         "team" : "Australia",
-        "name" : "Josh Hazlewood",
-        "batter" : false,
+        "name" : "Mitchell Marsh",
+        "batter": true,
+        "bowler" : true 
+    },
+    {
+        "team" : "Australia",
+        "name" : "Todd Murphy",
+        "batter": false,
+        "bowler" :  true
+    },
+    {
+        "team" : "Australia",
+        "name" : "Matthew Renshaw",
+        "batter": true,
+        "bowler" : false
+    },
+    {
+        "team" : "Australia",
+        "name" : "Steve Smith",
+        "batter": true,
         "bowler" : true
+    },
+    {
+        "team" : "Australia",
+        "name" : "Mitchell Starc",
+        "batter": false,
+        "bowler" : true
+    },
+    {
+        "team" : "Australia",
+        "name" : "David Warner",
+        "batter": true,
+        "bowler" : false
     }
-
 
 ]
