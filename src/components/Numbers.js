@@ -66,7 +66,7 @@ const Numbers = ({ setGuesses }) => {
             >
                 <Button 
                     variant='outlined'
-                    onClick={() => navigate('/head')}
+                    onClick={() => navigate('/pick')}
                 >Back</Button>          
                  <Button 
                     variant='contained'
