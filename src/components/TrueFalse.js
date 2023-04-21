@@ -74,7 +74,7 @@ const TrueFalse = ({ setGuesses }) => {
             > 
                 <Button 
                     variant="outlined"
-                    onClick={() => navigate('/pick')}
+                    onClick={() => navigate('/multi')}
                 >Back</Button>  
                     <Button 
                         variant='contained'
