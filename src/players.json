@@ -82,6 +82,12 @@
         "name" : "Liam Livingstone",
         "batter" : true,
         "bowler" : true
+    },    
+    {
+        "team" : "England",
+        "name" : "Rehan Ahmed",
+        "batter" : true,
+        "bowler" : true
     },
     {
         "team" : "Australia",

@@ -1,14 +1,12 @@
 import './App.css';
 import React, { useState, useEffect, createContext } from 'react'
 
-import Logo from './assets/sillashesLogo.png'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Logo_ECB from './assets/ecbLogo.png'
-import Logo_CA from './assets/ausLogo.png'
+
 import { ThemeProvider } from '@mui/material/styles';
 
 
-import { Box, Container, Toolbar } from '@mui/material'
+import { Container } from '@mui/material'
 
 import Home from './components/Home'
 import Navbar from './components/Navbar';
@@ -47,15 +45,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { sx: 1, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
-        <Toolbar sx={{ borderBottom: '2px solid black',justifyContent: 'space-between', p: { xs: 1, sm: 1 }}} >
-          <Box component="img" src={Logo_ECB} height={60} />
-          <Box component="img" src={Logo} height={50} />
-          {/* <Box component="img" src={Logo_Ashes} height={50} /> */}
-          <Box component="img" src={Logo_CA} height={60} />
-          {/* <Typography variant="h5">Silly Ashes</Typography> */}
-    
-        </Toolbar>
+      <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { xs: 0, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
+
 
         <BrowserRouter>
           <Navbar />

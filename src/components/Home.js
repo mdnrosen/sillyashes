@@ -7,7 +7,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh', m: 2 }}>
             <Typography variant="h4">
                 THE ASHES 2023
             </Typography>    

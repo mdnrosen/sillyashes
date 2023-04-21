@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
-import {IconButton, Divider, Menu, MenuItem, MenuList, Toolbar } from '@mui/material'
+import { Box, IconButton, Divider, Menu, MenuItem, MenuList, Toolbar } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { Menu as BurgerMenu } from '@mui/icons-material'
+import Logo from '../assets/sillashesLogo.png'
 
 
 const Navbar = () => {
@@ -51,12 +52,13 @@ const Navbar = () => {
 
     return (
         <Toolbar
-            disableGutters
-            sx={{ display: 'flex', justifyContent: 'flex-end'}}
+            
+            sx={{ display: 'flex', mb: 1, justifyContent: 'space-between' }}
         >
 
+            <Box component="img" src={Logo} height={40} />
             <IconButton 
-
+                size="large"
                 ref={buttonRef}
                 onClick={handleClick}
             >
