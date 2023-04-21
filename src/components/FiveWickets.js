@@ -52,7 +52,7 @@ const FiveWickets = ({ handlePickem, question }) => {
                     
                 </Toolbar>
                 <Grid container spacing={2}>
-                    {bowlers.reverse().map((p, i) =>
+                    {bowlers.map((p, i) =>
                         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                             <FormGroup
                                 onChange={handleChange}

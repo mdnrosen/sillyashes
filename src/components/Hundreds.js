@@ -42,7 +42,7 @@ const Hundreds = ({ handlePickem, question }) => {
                     <FormControlLabel
                         control={
                             <Checkbox 
-                                checked={guesses['tons'].includes(name)}
+                                checked={selected.includes(name)}
                                 value={name} 
                             />
                         }

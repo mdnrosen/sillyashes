@@ -11,9 +11,6 @@ exports.getBGColor = (name, players) => {
 }
 
 
-
-
-
 exports.questionAnswered = (question, guesses) => {
     if (question.name === 'bigHitters' || question.name === 'fullStraight') {
         const answers = Object.values(guesses[question.name])

@@ -71,8 +71,8 @@ const Quack = ({ handlePickem, question }) => {
                                     control={
                                         <Checkbox 
                                             value={p.name} 
-                                            disabled={isDisabled(p.name)}
                                             checked={selected.includes(p.name)}
+                                            disabled={isDisabled(p.name)}
                                         />
                                     }
                                     label={p.name}

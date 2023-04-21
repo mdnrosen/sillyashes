@@ -1,33 +1,27 @@
 [
     {
         "team" : "England",
-        "name" : "Rory Burns",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "England",
-        "name" : "Jason Roy",
-        "batter" : true,
-        "bowler" : false
-    },
-    {
-        "team" : "England",
-        "name" : "Joe Denly",
-        "batter" : true,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Joe Root",
-        "batter" : true,
-        "bowler" : true
-    },   
-    {
-        "team" : "England",
         "name" : "Ben Stokes",
         "batter" : true,
         "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "James Anderson",
+        "batter" : false,
+        "bowler" : true
+    },    
+    {
+        "team" : "England",
+        "name" : "Start Broad",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "Harry Brook",
+        "batter" : true,
+        "bowler" : false
     },
     {
         "team" : "England",
@@ -37,45 +31,21 @@
     },
     {
         "team" : "England",
-        "name" : "Jos Buttler",
+        "name" : "Zak Crawley",
         "batter" : true,
         "bowler" : false
     },
     {
         "team" : "England",
-        "name" : "Moeen Ali",
+        "name" : "Ben Duckett",
         "batter" : true,
-        "bowler" : true
+        "bowler" : false
     },
     {
         "team" : "England",
-        "name" : "Sam Curran",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Chris Woakes",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Craig Overton",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Stuart Broad",
-        "batter" : false,
-        "bowler" : true
-    },
-    {
-        "team" : "England",
-        "name" : "Jofra Archer",
-        "batter" : false,
-        "bowler" : true
+        "name" : "Ben Foakes",
+        "batter" : true,
+        "bowler" : false
     },
     {
         "team" : "England",
@@ -85,14 +55,32 @@
     },
     {
         "team" : "England",
-        "name" : "Olly Stone",
+        "name" : "Ollie Pope",
+        "batter" : true,
+        "bowler" : false
+    },
+    {
+        "team" : "England",
+        "name" : "Joe Root",
+        "batter" : true,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "Mark Wood",
         "batter" : false,
         "bowler" : true
     },
     {
         "team" : "England",
-        "name" : "James Anderson",
+        "name" : "Ollie Stone",
         "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
+        "name" : "Liam Livingstone",
+        "batter" : true,
         "bowler" : true
     },
     {

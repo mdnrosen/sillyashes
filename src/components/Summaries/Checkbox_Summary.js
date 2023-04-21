@@ -20,7 +20,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
         })
-    },[guesses, questions])
+    },[])
 
     const renderChosen = (q) => {
         // these are an object so need to be handled separately 

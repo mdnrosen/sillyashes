@@ -32,21 +32,7 @@ const BigHitters = ({ handlePickem, question }) => {
                 <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
                 <Typography variant="body2">{question.question}</Typography>
                 <Typography variant="caption"><i>{question.marks}</i></Typography>
-                {/* <Toolbar disableGutters >
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>
-                        {Object.values(selected).map((player, i) => 
-                            <Tooltip title={player} key={i}>
-                                <Chip
-                                    label={player}
-                                    sx={{ m: 0.5, color: 'white',   bgcolor: getBGColor(player, players)}}
-                                >
-                                        
-                                </Chip>
-                            </Tooltip>
-                        )}
-                    </Box>
-                    
-                </Toolbar> */}
+                
                 <Grid container spacing={2} sx={{ mt: 1}}>
                     <Grid item xs={12} sm={6}>
                         <FormControl fullWidth>

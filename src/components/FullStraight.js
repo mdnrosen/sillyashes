@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { Box, Divider, FormControl, InputLabel, Select, MenuItem, Grid, Typography } from '@mui/material'
-
+import { Box, FormControl, InputLabel, Select, MenuItem, Grid, Typography } from '@mui/material'
 import { GuessContext } from '../App'
 
 const FullStraight = ({ handlePickem, question }) => {

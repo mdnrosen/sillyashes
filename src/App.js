@@ -49,10 +49,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { sx: 1, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
         <Toolbar sx={{ borderBottom: '2px solid black',justifyContent: 'space-between', p: { xs: 1, sm: 1 }}} >
-          <Box component="img" src={Logo_ECB} height={40} />
-          <Box component="img" src={Logo} height={40} />
+          <Box component="img" src={Logo_ECB} height={60} />
+          <Box component="img" src={Logo} height={50} />
           {/* <Box component="img" src={Logo_Ashes} height={50} /> */}
-          <Box component="img" src={Logo_CA} height={40} />
+          <Box component="img" src={Logo_CA} height={60} />
           {/* <Typography variant="h5">Silly Ashes</Typography> */}
     
         </Toolbar>
