@@ -13,7 +13,7 @@ const QTitle = ({ title, num, help }) => {
         <Box component="span" sx={{ display: 'flex', alignItems: 'center'}}>
             <Typography variant="h6"><b>{num}. {title}</b></Typography>
             {help ?
-                <ClickAwayListener onClickAway={() => setOpen(false)} sx={{ display: { xs: 'flex', md: 'none' }}}>
+                <ClickAwayListener onClickAway={() => setOpen(false)}>
                     <div>
                         <Tooltip
                             PopperProps={{
