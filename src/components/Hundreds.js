@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
-import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography, } from '@mui/material'
+import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, IconButton, Toolbar, Tooltip, Typography, } from '@mui/material'
 
 import { GuessContext } from '../App'
+import { Help } from '@mui/icons-material'
+import QTitle from './QTitle'
 
 
 
@@ -33,7 +35,6 @@ const Hundreds = ({ handlePickem, question }) => {
 
 
 
-
     const renderCheckbox = (name, i) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                 <FormGroup
@@ -56,7 +57,12 @@ const Hundreds = ({ handlePickem, question }) => {
     return (
         <Grid item >
             <Box sx={{ display: 'flex', flexDirection: 'column'}}>
-                    <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
+                <QTitle
+                    title={question.title}
+                    num={question.num}
+                    help={question.help}
+                />
+
                     <Typography variant="body1">{question.question}</Typography>
                     <Typography variant="caption"><i>{question.marks}</i></Typography>
                     <Toolbar disableGutters >

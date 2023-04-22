@@ -233,6 +233,7 @@
         "roundNum" : 2,
         "name" : "5fers",
         "title" : "5-fers!",
+        "help" : "No extra points for multiple 5fers",
         "marks" : "+5 for each correct, -3 for each incorrect or missed",
         "question" : "Pick EVERY bowler who will take a 5fer",
         "options" : "bowler"
@@ -287,6 +288,7 @@
         "roundName": "Numbers",
         "roundNum" : 3,
         "title": "Go Hard",
+        "help" : "Rounded to the nearest whole number please",
         "question" : "What will Ben Stokes' batting strike rate be?",
         "answer" : "",
         "name": "num_stokesSR"
@@ -717,7 +719,7 @@
     {
         "num" : 35,
         "title": "Dead Rubber",
-        "help": "By 'decided', we mean who retains / wins the Ashes",
+        "help": "By 'decided', we mean the winner or retainer of the Ashes",
         "question" : "The Ashes will be decided before the 5th Test.",
         "name": "tf_decided",
         "roundName" : "True or False",

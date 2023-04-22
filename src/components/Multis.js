@@ -1,19 +1,15 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useState, useContext } from 'react'
-import { Help } from '@mui/icons-material'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
+import QTitle from './QTitle'
 import data from '../master.json'
-import HelpModal from './HelpModal'
 import { GuessContext } from '../App'
 const Multis = ({ setGuesses }) => {
-    const [ open, setOpen ] = useState(false)
     const guesses = useContext(GuessContext)
     const getRoundQs = () => data.filter(d => d.roundNum === 4)
 
 
-    const toggle = () => setOpen(!open)
 
     const navigate = useNavigate()
 
@@ -26,32 +22,25 @@ const Multis = ({ setGuesses }) => {
 
     return (
         <Card sx={{ md: {m: 1} }}>
-            <HelpModal
-                open={open}
-                toggle={toggle}
-                questions={getRoundQs().filter(q => q.help)}
-            />
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
                 title={<Typography textAlign="left" variant="h5">Randoms</Typography>}
                 subheader={<Typography textAlign="left" variant="overline">+5 points for each correct</Typography>}
-                action={
-                <IconButton 
-                    onClick={() => toggle()}
-                    sx={{ color: 'white'}}>
-                        <Help />
-                </IconButton>
-                }
+
             />          
             <Divider />
 
-            <CardContent>
+            <CardContent sx={{ mb: 3 }}>
                 <Box component="form" onChange={handleChange}>
                     <Grid container spacing={3}>
                         {getRoundQs().map((q, i) =>
                             <Grid key={q.name} item xs={12}>
                                 <RadioGroup>
-                                    <Typography variant="h6"><b>{q.num}. {q.title}</b></Typography>
+                                    <QTitle
+                                        title={q.title}
+                                        num={q.num}
+                                        help={q.help}
+                                    />   
                                     <Typography sx={{ mb: 1}}variant="body1">{q.question}</Typography>
                                     {q.options.map((opt, i) =>
                                         <FormControlLabel

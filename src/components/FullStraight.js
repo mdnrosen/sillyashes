@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { Box, FormControl, InputLabel, Select, MenuItem, Grid, Typography } from '@mui/material'
 import { GuessContext } from '../App'
-
+import QTitle from './QTitle'
 const FullStraight = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
     const bowlersAus = players.filter(p => p.team === 'Australia' && p.bowler)
@@ -30,8 +30,11 @@ const FullStraight = ({ handlePickem, question }) => {
     return (
         <Grid item xs={12}>
             <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%'}}>
-                <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
-                <Typography variant="body2">{question.question}</Typography>
+                <QTitle
+                    title={question.title}
+                    num={question.num}
+                    help={question.help}
+                />                   <Typography variant="body2">{question.question}</Typography>
                 <Typography variant="caption"><i>{question.marks}</i></Typography>
 
                 <Grid container spacing={2} sx={{ mt: 1}}>

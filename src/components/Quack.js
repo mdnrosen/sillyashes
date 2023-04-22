@@ -4,7 +4,7 @@ import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 
 import { GuessContext } from '../App'
-
+import QTitle from './QTitle'
 const Quack = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext) 
 
@@ -40,9 +40,12 @@ const Quack = ({ handlePickem, question }) => {
 
     return (
         <Grid item>
-            
             <Box sx={{ display: 'flex', flexDirection: 'column'}}>
-                <Typography variant="h6"><b>{question.num}. {question.title}</b></Typography>
+                <QTitle
+                    title={question.title}
+                    num={question.num}
+                    help={question.help}
+                />                
                 <Typography variant="body1">{question.question}</Typography>
                 <Typography variant="caption"><i>{question.marks}</i></Typography>
 
