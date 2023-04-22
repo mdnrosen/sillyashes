@@ -9,11 +9,21 @@ const QTitle = ({ title, num, help }) => {
         <Box component="span" sx={{ display: 'flex', alignItems: 'center'}}>
             <Typography variant="h6"><b>{num}. {title}</b></Typography>
             {help ?
-                <Tooltip title={help} arrow placement="bottom-start">
+                <>
+                {/* This is desktop, tooltip on hover (default) */}
+                <Tooltip title={help} arrow placement="bottom-start" sx={{ display: { xs: 'none', md: 'flex' }}}>
                     <IconButton>
                         <Help /> 
                     </IconButton>
                 </Tooltip>
+
+                {/* This is the mobile one with tooltip on tap */}
+                <Tooltip title={help} arrow placement="bottom-start" sx={{ display: { xs: 'flex', md: 'none' }}}>
+                    <IconButton>
+                        <Help /> 
+                    </IconButton>
+                </Tooltip>
+                </>
                 :
                 null
             }
