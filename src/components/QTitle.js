@@ -28,7 +28,7 @@ const QTitle = ({ title, num, help }) => {
                             arrow 
                             placement="bottom-start" 
                         >
-                            <IconButton onClick={() => setOpen(true)}>
+                            <IconButton onClick={() => setOpen(!open)}>
                                 <Help /> 
                             </IconButton>
                         </Tooltip>
