@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor } from '../helpers'
-import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, IconButton, Toolbar, Tooltip, Typography, } from '@mui/material'
+import { getAvatarName, getBGColor, sortByName } from '../helpers'
+import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography, } from '@mui/material'
 
 import { GuessContext } from '../App'
-import { Help } from '@mui/icons-material'
 import QTitle from './QTitle'
 
 
@@ -13,7 +12,7 @@ import QTitle from './QTitle'
 const Hundreds = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
     const [ selected, setSelected ] = useState([])
-
+    const batters = players.filter(p => p.batter)
 
 
     const handleChange = (e) => {
@@ -79,11 +78,11 @@ const Hundreds = ({ handlePickem, question }) => {
                         </Box>                        
                     </Toolbar>
                 <Grid container spacing={2} justifyContent="flex-start">
-                    {players.filter(p => p.team === 'England').map((p, i) =>
+                    {sortByName(batters).filter(p => p.team === 'England').map((p, i) =>
                       renderCheckbox(p.name, i)
                     )}              
                     <Divider />
-                    {players.filter(p => p.team === 'Australia').map((p, i) =>
+                    {sortByName(batters).filter(p => p.team === 'Australia').map((p, i) =>
                       renderCheckbox(p.name, i)
                     )}
                 </Grid>

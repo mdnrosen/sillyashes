@@ -19,3 +19,13 @@ exports.questionAnswered = (question, guesses) => {
         return guesses[question.name].length ? true : false
     }
 }
+
+
+exports.sortByName = (players) => {
+    function compare(a, b) {
+        if (a.name < b.name) return -1
+        if (a.name > b.name) return 1
+        return 0
+    }
+    return players.sort(compare)
+}

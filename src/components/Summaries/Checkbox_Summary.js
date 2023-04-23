@@ -4,6 +4,8 @@ import { Edit, ExpandLess, ExpandMore } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { questionAnswered } from '../../helpers'
 import { GuessContext } from '../../App'
+import players from '../../players.json'
+
 
 
 const Radio_Summary = ({ questions, title, roundPath }) => {
@@ -23,6 +25,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
     },[])
 
     const renderChosen = (q) => {
+        console.log('Q ->',q)
         // these are an object so need to be handled separately 
         if (q.name === 'bigHitters' || q.name === 'fullStraight') {
             
@@ -59,6 +62,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             )
         } else {
             const arr = guesses[q.name]
+            console.log('Summary',arr)
             // its an array, so return what was guesses
             return (
                 <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
@@ -80,7 +84,7 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
 
 
     return (
-        <Paper elevation={2}>
+        <Paper elevation={1} my={{ my: 1}}>
             <Box component="div">
                 <Toolbar sx={{ p: 1, display: 'flex', justifyContent: 'space-between'}}>
                     <ListItemText 
@@ -132,7 +136,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
                                 {renderChosen(q)}
-     
                             </Toolbar>
                             <Divider />
                             </>

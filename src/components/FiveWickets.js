@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor } from '../helpers'
+import { getAvatarName, getBGColor, sortByName } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 import QTitle from './QTitle'
 import { GuessContext } from '../App'
@@ -27,7 +27,7 @@ const FiveWickets = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['5fers'])
-    },[])
+    },[guesses])
 
 
     return (
@@ -37,7 +37,8 @@ const FiveWickets = ({ handlePickem, question }) => {
                     title={question.title}
                     num={question.num}
                     help={question.help}
-                />                   <Typography variant="body2">{question.question}</Typography>
+                />                   
+                <Typography variant="body2">{question.question}</Typography>
                 <Typography variant="caption"><i>{question.marks}</i></Typography>
                 <Toolbar disableGutters >
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>
@@ -55,7 +56,7 @@ const FiveWickets = ({ handlePickem, question }) => {
                     
                 </Toolbar>
                 <Grid container spacing={2}>
-                    {bowlers.map((p, i) =>
+                    {sortByName(bowlers).map((p, i) =>
                         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                             <FormGroup
                                 onChange={handleChange}

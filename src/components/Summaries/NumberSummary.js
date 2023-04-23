@@ -27,7 +27,7 @@ const NumberSummary = ({ questions, title, roundPath}) => {
 
 
     return (
-        <Paper elevation={2}>
+        <Paper elevation={1} sx={{ my: 1 }}>
             <Box component="div">
                 <Toolbar sx={{ p: 1, display: 'flex', justifyContent: 'space-between'}}>
                     <ListItemText 
@@ -65,7 +65,7 @@ const NumberSummary = ({ questions, title, roundPath}) => {
                                         }  
                     
                                     />
-                                    <ListItemSecondaryAction>
+                                    <ListItemSecondaryAction> 
                                         <IconButton onClick={() => navigate(roundPath)}>
                                             <Edit />
                                         </IconButton>

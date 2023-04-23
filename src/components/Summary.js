@@ -34,8 +34,14 @@ const Summary = () => {
             <Divider />
             <Toolbar sx={{ p: 3, background: '#add8e680', display: 'flex', justifyContent: 'center' }}>
                 {complete ? 
-                    <Box component="div">
-                        <TextField fullWidth />
+                    <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <Typography variant="body2">Review your answers before submitting</Typography>
+                        <Typography variant="body2">Once you've submitted, you cannot change your answers</Typography>
+                        <Typography variant="body2">Fill in your name or a nickname below (please do not use your email)</Typography>
+                        <TextField 
+                            placeholder='Enter your name or a nickname'
+                            fullWidth 
+                        />
                         <Button fullWidth variant="contained" color="primary">Submit Answers</Button>
 
 

@@ -20,12 +20,12 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
         questions.forEach(q => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
-        })
+        }) 
     },[guesses, questions])
 
 
     return (
-        <Paper elevation={2}>
+        <Paper elevation={1} sx={{ my: 1 }}>
             <Box component="div">
                 <Toolbar sx={{ p: 1, display: 'flex', justifyContent: 'space-between'}}>
                     <ListItemText 

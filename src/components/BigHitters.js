@@ -3,6 +3,7 @@ import players from '../players.json'
 import { Box, Divider,FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 import { GuessContext } from '../App'
 import QTitle from './QTitle'
+import { sortByName } from '../helpers'
 
 
 const BigHitters = ({ handlePickem, question }) => {
@@ -44,7 +45,7 @@ const BigHitters = ({ handlePickem, question }) => {
                         <FormControl fullWidth>
                             <InputLabel>England</InputLabel>
                             <Select label="England" name="engSixes" onChange={handleChange} value={selected.engSixes|| ''}>
-                                {battersEng.map((b, i) =>
+                                {sortByName(battersEng).map((b, i) =>
                                     <MenuItem
                                         key={i}
                                         value={b.name}
@@ -60,7 +61,7 @@ const BigHitters = ({ handlePickem, question }) => {
                         <FormControl fullWidth>
                             <InputLabel>Australia</InputLabel>
                             <Select label="Australia" name="ausSixes" onChange={handleChange} value={selected.ausSixes || ''}>
-                                {battersAus.map((b, i) =>
+                                {sortByName(battersAus).map((b, i) =>
                                     <MenuItem
                                         key={i}
                                         value={b.name}
