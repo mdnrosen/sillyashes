@@ -27,7 +27,7 @@ const FiveWickets = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['5fers'])
-    },[guesses])
+    },[])
 
 
     return (

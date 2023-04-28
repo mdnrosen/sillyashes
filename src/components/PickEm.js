@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Grid, IconButton, Typography } from '@mui/material'
 
@@ -20,8 +20,6 @@ const PickEm = ({ setGuesses }) => {
 
 
     const handlePickem = (selected, questionName) => {
-        console.log('Selected ->', selected)
-        console.log('questionName ->', questionName)
         setGuesses({...guesses, [questionName]: selected })
     }
 
