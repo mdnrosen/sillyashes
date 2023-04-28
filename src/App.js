@@ -38,6 +38,7 @@ function App() {
     useEffect(() => {
       window.localStorage.setItem(key, JSON.stringify(value))
     }, [key, value])
+    console.log('value', value)
     return [ value, setValue ]
   }
   
@@ -55,7 +56,6 @@ function App() {
           <GuessContext.Provider value={guesses}>
           {/* <Progress current={step} /> */}
             <Routes>
-
               <Route path="/head" element={<HeadtoHead setGuesses={setGuesses} />} />
               <Route path="/pick" element={<PickEm setGuesses={setGuesses}  />} />
               <Route path="/numbers" element={<Numbers setGuesses={setGuesses} />} />
@@ -65,7 +65,6 @@ function App() {
               <Route path="/results" element={<Results />} />
               <Route exact path="/" element={<Home />} />
               <Route path="/*" element={<NotFound />} />
-
             </Routes>
           </GuessContext.Provider>
         </BrowserRouter>

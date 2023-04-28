@@ -24,9 +24,7 @@ const PickEm = ({ setGuesses }) => {
     }
 
 
-
-
-
+    
     return (
         <Card sx={{ md: {m: 1} }}>
             <CardHeader
@@ -35,7 +33,7 @@ const PickEm = ({ setGuesses }) => {
                 subheader={<Typography textAlign="left" variant="overline">Points are different for each question</Typography>}
             />
             <CardContent sx={{ mb: 3}}>
-                <Box component="form" >
+                <Box component="div" >
                     <Grid container spacing={3}>
                         <Hundreds 
                             handlePickem={handlePickem}

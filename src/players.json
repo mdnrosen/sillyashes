@@ -19,6 +19,12 @@
     },
     {
         "team" : "England",
+        "name" : "Ollie Robinson",
+        "batter" : false,
+        "bowler" : true
+    },
+    {
+        "team" : "England",
         "name" : "Harry Brook",
         "batter" : true,
         "bowler" : false

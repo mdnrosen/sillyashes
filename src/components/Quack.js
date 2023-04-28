@@ -2,14 +2,12 @@ import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
 import { getAvatarName, getBGColor } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
-
+import QTitle from './QTitle' 
 import { GuessContext } from '../App'
-import QTitle from './QTitle'
+
 const Quack = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext) 
-
     const batters = players.filter(pl => pl.batter)
-
     const [ selected, setSelected ] = useState([])
 
 
