@@ -38,7 +38,6 @@ function App() {
     useEffect(() => {
       window.localStorage.setItem(key, JSON.stringify(value))
     }, [key, value])
-    console.log('value', value)
     return [ value, setValue ]
   }
   
@@ -54,7 +53,6 @@ function App() {
           <ScrollToTop />
           <ScrollTopButton />
           <GuessContext.Provider value={guesses}>
-          {/* <Progress current={step} /> */}
             <Routes>
               <Route path="/head" element={<HeadtoHead setGuesses={setGuesses} />} />
               <Route path="/pick" element={<PickEm setGuesses={setGuesses}  />} />

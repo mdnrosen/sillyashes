@@ -6,6 +6,7 @@ import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolba
 import { GuessContext } from '../App'
 import QTitle from './QTitle'
 
+import { getRandy } from '../helpers'
 
 
 
@@ -30,7 +31,7 @@ const Hundreds = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['tons'])
-    },[guesses])
+    },[])
 
 
 
@@ -66,8 +67,8 @@ const Hundreds = ({ handlePickem, question }) => {
                     <Typography variant="caption"><i>{question.marks}</i></Typography>
                     <Toolbar disableGutters >
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1 }}>
-                            {selected.map((player, i) => 
-                                <Tooltip title={player} key={i}>
+                            {selected.map(player => 
+                                <Tooltip title={player} key={getRandy()}>
                                     <Chip
                                         label={getAvatarName(player)}
                                         sx={{ m: 0.5, color: 'white',   bgcolor: getBGColor(player, players)}}

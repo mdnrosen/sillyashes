@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor } from '../helpers'
+import { getAvatarName, getBGColor, getRandy } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 import QTitle from './QTitle' 
 import { GuessContext } from '../App'
@@ -24,7 +24,7 @@ const Quack = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['quack'])
-    },[guesses])
+    },[])
 
 
     const isDisabled = (value) => { 
@@ -49,8 +49,8 @@ const Quack = ({ handlePickem, question }) => {
 
                 <Toolbar disableGutters >
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', my: 1}}>
-                        {selected.map((player, i) => 
-                            <Tooltip title={player} key={i}>
+                        {selected.map(player => 
+                            <Tooltip title={player} key={getRandy()}>
                                 <Chip
                                     label={getAvatarName(player)}
                                     sx={{ m: 0.5, color: 'white',   bgcolor: getBGColor(player, players)}}

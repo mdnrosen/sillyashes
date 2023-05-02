@@ -29,3 +29,8 @@ exports.sortByName = (players) => {
     }
     return players.sort(compare)
 }
+
+
+exports.getRandy = () => {
+    return Math.floor(Math.random() * 1000000)
+}
