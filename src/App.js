@@ -23,11 +23,12 @@ import theme from './theme'
 import defaultState from './defaultState.json'
 import ScrollToTop from './components/ScrollToTop'
 import ScrollTopButton from './components/ScrollTopButton';
+
 export const GuessContext = createContext([])
 
 function App() {
   const [ guesses, setGuesses ] = useStickyState(defaultState, 'sillyAshes')
-
+  // const [ guesses, setGuesses ] = useState(defaultState)
 
   function useStickyState(defaultVal, key) {
     const [ value, setValue ] = useState(() => {

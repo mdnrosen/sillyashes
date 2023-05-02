@@ -34,8 +34,8 @@ const Hundreds = ({ handlePickem, question }) => {
 
 
 
-    const renderCheckbox = (name, i) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+    const renderCheckbox = (name, id) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={id}>
                 <FormGroup
                     onChange={handleChange}
                 >
@@ -78,12 +78,12 @@ const Hundreds = ({ handlePickem, question }) => {
                         </Box>                        
                     </Toolbar>
                 <Grid container spacing={2} justifyContent="flex-start">
-                    {sortByName(batters).filter(p => p.team === 'England').map((p, i) =>
-                      renderCheckbox(p.name, i)
+                    {sortByName(batters).filter(p => p.team === 'England').map(p =>
+                      renderCheckbox(p.name, p.id)
                     )}              
                     <Divider />
-                    {sortByName(batters).filter(p => p.team === 'Australia').map((p, i) =>
-                      renderCheckbox(p.name, i)
+                    {sortByName(batters).filter(p => p.team === 'Australia').map(p =>
+                      renderCheckbox(p.name, p.id)
                     )}
                 </Grid>
             </Box>

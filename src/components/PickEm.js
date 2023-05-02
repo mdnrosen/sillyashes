@@ -43,11 +43,15 @@ const PickEm = ({ setGuesses }) => {
                             handlePickem={handlePickem}
                             question={getRoundQs().find(q => q.name === 'quack')}
                         />      
-                 
-                         <FiveWickets 
+                        <FiveWickets 
                             handlePickem={handlePickem}
                             question={getRoundQs().find(q => q.name === '5fers')}
-                        />                       
+                        />    
+                 
+                         {/* <FiveWickets 
+                            handlePickem={handlePickem}
+                            question={getRoundQs().find(q => q.name === '5fers')}
+                        />                        */}
                         <BigHitters 
                             handlePickem={handlePickem}
                             question={getRoundQs().find(q => q.name === 'bigHitters')}
