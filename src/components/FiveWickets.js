@@ -30,12 +30,12 @@ const FiveWickets = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['5fers'])
-    },[])
+    },[guesses])
 
 
 
-    const renderCheckbox = (name, i) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+    const renderCheckbox = (name, id) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={id}>
                 <FormGroup
                     onChange={handleChange}
                 >
@@ -78,12 +78,12 @@ const FiveWickets = ({ handlePickem, question }) => {
                         </Box>                        
                     </Toolbar>
                 <Grid container spacing={2} justifyContent="flex-start">
-                    {sortByName(bowlers).filter(p => p.team === 'England').map((p, i) =>
-                      renderCheckbox(p.name, i)
+                    {sortByName(bowlers).filter(p => p.team === 'England').map(p =>
+                      renderCheckbox(p.name, p.id)
                     )}              
                     <Divider />
-                    {sortByName(bowlers).filter(p => p.team === 'Australia').map((p, i) =>
-                      renderCheckbox(p.name, i)
+                    {sortByName(bowlers).filter(p => p.team === 'Australia').map(p =>
+                      renderCheckbox(p.name, p.id)
                     )}
                 </Grid>
             </Box>

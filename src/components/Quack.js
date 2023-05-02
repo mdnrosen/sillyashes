@@ -24,7 +24,7 @@ const Quack = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['quack'])
-    },[])
+    },[guesses])
 
 
     const isDisabled = (value) => { 
@@ -62,8 +62,8 @@ const Quack = ({ handlePickem, question }) => {
                     
                 </Toolbar>
                 <Grid container spacing={2}>
-                    {batters.map((p, i) =>
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+                    {batters.map(p =>
+                        <Grid item xs={12} sm={6} md={4} lg={3} key={p.id}>
                             <FormGroup
                                 onChange={handleChange}
                                 max={3}

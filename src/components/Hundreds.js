@@ -30,7 +30,7 @@ const Hundreds = ({ handlePickem, question }) => {
 
     useEffect(() => {
         setSelected(guesses['tons'])
-    },[])
+    },[guesses])
 
 
 

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Box, IconButton, Divider, Menu, MenuItem, MenuList, Toolbar } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Menu as BurgerMenu } from '@mui/icons-material'
 import Logo from '../assets/sillashesLogo.png'
 
@@ -9,6 +9,7 @@ const Navbar = () => {
     const [ anchorEl, setAnchorEl ] = useState(null)
     const open = Boolean(anchorEl)
     const navigate = useNavigate()
+    const location = useLocation()
     const buttonRef = useRef()
 
     const handleClick = () => {
@@ -62,7 +63,7 @@ const Navbar = () => {
                 ref={buttonRef}
                 onClick={handleClick}
             >
-                    <BurgerMenu />
+                <BurgerMenu />
             </IconButton>
 
 
@@ -72,16 +73,22 @@ const Navbar = () => {
             onClose={handleClose}
         >
             <MenuList>
-                <MenuItem onClick={() => handleNavigate('/')}>Home</MenuItem>
+                <MenuItem
+                    selected={location.pathname === '/'}
+                    onClick={() => handleNavigate('/')}
+                >Home</MenuItem>
                 <Divider />
                 {navItems.map(item =>
                     <MenuItem 
+                        selected={location.pathname === item.link}
                         key={item.label}
                         onClick={() => handleNavigate(item.link)}
                     >{item.label}</MenuItem>    
                 )}
                 <Divider />
-                <MenuItem onClick={() => handleNavigate('/summary')}>
+                <MenuItem 
+                    selected={location.pathname === '/summary'}
+                    onClick={() => handleNavigate('/summary')}>
                     Summary
                 </MenuItem>
             </MenuList>

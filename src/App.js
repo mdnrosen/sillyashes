@@ -28,7 +28,6 @@ export const GuessContext = createContext([])
 
 function App() {
   const [ guesses, setGuesses ] = useStickyState(defaultState, 'sillyAshes')
-  // const [ guesses, setGuesses ] = useState(defaultState)
 
   function useStickyState(defaultVal, key) {
     const [ value, setValue ] = useState(() => {
