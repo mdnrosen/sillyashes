@@ -1,10 +1,11 @@
 import './App.css';
+
+import axios from 'axios';
 import React, { useState, useEffect, createContext } from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from '@mui/material/styles';
-
 
 import { Container } from '@mui/material'
 
@@ -40,14 +41,16 @@ function App() {
     }, [key, value])
     return [ value, setValue ]
   }
+
+
+  useEffect(() => {
+    axios.get(`http://localhost:5000/api/guesses`)
+  },[])
   
- 
 
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { xs: 0, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
-
-
         <BrowserRouter>
           <Navbar />
           <ScrollToTop />
@@ -66,7 +69,6 @@ function App() {
             </Routes>
           </GuessContext.Provider>
         </BrowserRouter>
-
       </Container>
     </ThemeProvider>
 

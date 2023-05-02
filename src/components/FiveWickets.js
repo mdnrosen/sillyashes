@@ -28,12 +28,6 @@ const FiveWickets = ({ handlePickem, question }) => {
     },[selected])
 
 
-    // useEffect(() => {
-    //     setSelected(guesses['5fers'])
-    // },[])
-
-
-
     const renderCheckbox = (name, id) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={id}>
                 <FormGroup
