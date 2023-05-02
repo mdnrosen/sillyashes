@@ -8,7 +8,7 @@ import { GuessContext } from '../App'
 const Quack = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext) 
     const batters = players.filter(pl => pl.batter)
-    const [ selected, setSelected ] = useState([])
+    const [ selected, setSelected ] = useState(guesses['quack'])
 
 
     const handleChange = (e) => {
@@ -22,9 +22,11 @@ const Quack = ({ handlePickem, question }) => {
         handlePickem(selected, 'quack', 12)
     },[selected])
 
-    useEffect(() => {
-        setSelected(guesses['quack'])
-    },[])
+    
+
+    // useEffect(() => {
+    //     setSelected(guesses['quack'])
+    // },[])
 
 
     const isDisabled = (value) => { 

@@ -11,7 +11,7 @@ import QTitle from './QTitle'
 
 const FiveWickets = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
-    const [ selected, setSelected ] = useState([])
+    const [ selected, setSelected ] = useState(guesses['5fers'])
     const bowlers = players.filter(p => p.bowler)
 
 
@@ -28,9 +28,9 @@ const FiveWickets = ({ handlePickem, question }) => {
     },[selected])
 
 
-    useEffect(() => {
-        setSelected(guesses['5fers'])
-    },[])
+    // useEffect(() => {
+    //     setSelected(guesses['5fers'])
+    // },[])
 
 
 

@@ -12,7 +12,7 @@ import { getRandy } from '../helpers'
 
 const Hundreds = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
-    const [ selected, setSelected ] = useState([])
+    const [ selected, setSelected ] = useState(guesses['tons'])
     const batters = players.filter(p => p.batter)
 
 
@@ -29,9 +29,9 @@ const Hundreds = ({ handlePickem, question }) => {
     },[selected])
 
 
-    useEffect(() => {
-        setSelected(guesses['tons'])
-    },[])
+    // useEffect(() => {
+    //     setSelected(guesses['tons'])
+    // },[])
 
 
 
