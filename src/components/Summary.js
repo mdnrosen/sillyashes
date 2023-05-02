@@ -17,6 +17,8 @@ const Summary = () => {
     const guesses = useContext(GuessContext)
     const [ complete, setComplete ] = useState(true)
     const [ name, setName ] = useState('')
+    const [ submitted, setSubmitted ] = useState(false)
+
 
     const handleSubmit = () => {
         complete ? saveGuesses() : window.alert('Please finish answering all questions before submitting')
@@ -29,6 +31,9 @@ const Summary = () => {
                 guesses
             })
 
+            // need to set cookie to know if this device has submitted answers 
+            window.localStorage.setItem('YYESYESYESY', true)
+            
             console.log(res)
             window.alert(`Answers submitted for ${name}`)
         
