@@ -43,8 +43,18 @@ function App() {
   }
 
 
+  const getAllGuesses = async () => {
+    try {
+      const res = await axios.get(`http://localhost:7777/people`)
+      console.log(res.data)
+      return res.data
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/guesses`)
+    getAllGuesses()
   },[])
   
 
