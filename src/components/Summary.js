@@ -1,6 +1,6 @@
 import { Box, Divider, Toolbar, Typography, TextField, Button } from '@mui/material'
 import React, { useState, useEffect, useContext } from 'react'
-
+import axios  from 'axios'
 
 
 import RadioSummary from './Summaries/Radio_Summary';
@@ -15,14 +15,40 @@ import { GuessContext } from '../App';
 // change data to questions in this file
 const Summary = () => {
     const guesses = useContext(GuessContext)
-    const [complete, setComplete] = useState(true)
+    const [ complete, setComplete ] = useState(true)
+    const [ name, setName ] = useState('')
+
+    const handleSubmit = () => {
+        complete ? saveGuesses() : window.alert('Please finish answering all questions before submitting')
+    }
+
+    const saveGuesses = async () => {
+        try {
+            const res = await axios.post('http://localhost:7777/add', {
+                name,
+                guesses
+            })
+
+            console.log(res)
+            window.alert(`Answers submitted for ${name}`)
+        
+        } catch(err) {
+            console.log(err)
+        }
+    }
 
 
-    useEffect(() => {
+    const checkAllAnswered = () => {
         questions.forEach(q => {
             const result = questionAnswered(q, guesses)
             if (!result) setComplete(false)
         })
+    }
+
+
+
+    useEffect(() => {
+        checkAllAnswered()
     },[guesses])
 
 
@@ -41,8 +67,14 @@ const Summary = () => {
                         <TextField 
                             placeholder='Enter your name or a nickname'
                             fullWidth 
+                            required
+                            onChange={(e) => setName(e.target.value)}
                         />
-                        <Button fullWidth variant="contained" color="primary">Submit Answers</Button>
+                        <Button
+                            fullWidth 
+                            variant="contained" 
+                            onClick={handleSubmit}
+                            color="primary">Submit Answers</Button>
 
 
                     </Box>
