@@ -67,6 +67,7 @@ function App() {
           <ScrollTopButton />
           <GuessContext.Provider value={guesses}>
             <Routes>
+              {/* Here i need to build a higher order component to control redirect from locked */}
               <Route path="/head" element={<HeadtoHead setGuesses={setGuesses} />} />
               <Route path="/pick" element={<PickEm setGuesses={setGuesses}  />} />
               <Route path="/numbers" element={<Numbers setGuesses={setGuesses} />} />

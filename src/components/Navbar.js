@@ -11,6 +11,7 @@ const Navbar = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const buttonRef = useRef()
+    const [ locked, setLocked] = useState(window.localStorage.getItem('sillyAshes_locked'))
 
     const handleClick = () => {
         setAnchorEl(buttonRef.current)
@@ -83,6 +84,7 @@ const Navbar = () => {
                         selected={location.pathname === item.link}
                         key={item.label}
                         onClick={() => handleNavigate(item.link)}
+                        disabled={locked}
                     >{item.label}</MenuItem>    
                 )}
                 <Divider />

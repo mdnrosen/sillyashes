@@ -65,11 +65,13 @@ const NumberSummary = ({ questions, title, roundPath}) => {
                                         }  
                     
                                     />
-                                    <ListItemSecondaryAction> 
-                                        <IconButton onClick={() => navigate(roundPath)}>
-                                            <Edit />
-                                        </IconButton>
-                                    </ListItemSecondaryAction>
+                                    {window.localStorage.getItem('sillyAshes_locked') ? null :
+                                        <ListItemSecondaryAction> 
+                                            <IconButton onClick={() => navigate(roundPath)}>
+                                                <Edit />
+                                            </IconButton>
+                                        </ListItemSecondaryAction>
+                                    }
 
                                 </ListItem>
                                 <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>

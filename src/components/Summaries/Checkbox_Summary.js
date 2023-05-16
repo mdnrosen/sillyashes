@@ -25,7 +25,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
     },[])
 
     const renderChosen = (q) => {
-        console.log('Q ->',q)
         // these are an object so need to be handled separately 
         if (q.name === 'bigHitters' || q.name === 'fullStraight') {
             
@@ -62,7 +61,6 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
             )
         } else {
             const arr = guesses[q.name]
-            console.log('Summary',arr)
             // its an array, so return what was guesses
             return (
                 <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
@@ -127,11 +125,14 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                                         }  
                     
                                     />
-                                    <ListItemSecondaryAction>
-                                        <IconButton onClick={() => navigate(roundPath)}>
-                                            <Edit />
-                                        </IconButton>
-                                    </ListItemSecondaryAction>
+                                    {window.localStorage.getItem('sillyAshes_locked') ? null :
+
+                                        <ListItemSecondaryAction>
+                                            <IconButton onClick={() => navigate(roundPath)}>
+                                                <Edit />
+                                            </IconButton>
+                                        </ListItemSecondaryAction>
+                                    }
                                 </ListItem>
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>

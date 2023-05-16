@@ -67,11 +67,13 @@ const Radio_Summary = ({ questions, title, roundPath }) => {
                                         }  
                     
                                     />
+                                    {window.localStorage.getItem('sillyAshes_locked') ? null :
                                     <ListItemSecondaryAction>
                                         <IconButton onClick={() => navigate(roundPath)}>
                                             <Edit />
                                         </IconButton>
                                     </ListItemSecondaryAction>
+                                    }
                                 </ListItem>
             
                             <Toolbar sx={{ p: 1,  display: 'flex', flexWrap: 'wrap' }}>
