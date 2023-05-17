@@ -50,7 +50,7 @@ const HeadtoHead = ({ setGuesses }) => {
                                                 <Radio
                                                     id={q.num.toString()} 
                                                     value={opt.value} 
-                                                    checked={guesses[q.name] && opt.value === guesses[q.name]}
+                                                    checked={guesses[q.name].length && opt.value === guesses[q.name]}
                                                 />
                                             }
                                             label={opt.label}

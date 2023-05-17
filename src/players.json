@@ -78,6 +78,13 @@
     },
     {
         "team": "England",
+        "name": "Dan Lawrence",
+        "batter": true,
+        "bowler": false,
+        "id": "85e986f9-8271-1uud-b814-lawr3cdd7cb2"
+    },
+    {
+        "team": "England",
         "name": "Joe Root",
         "batter": true,
         "bowler": true,
@@ -92,7 +99,7 @@
     },
     {
         "team": "England",
-        "name": "Ollie Stone",
+        "name": "Matthew Potts",
         "batter": false,
         "bowler": true,
         "id": "1d962547-98bf-4ffe-b5fc-fc7cf9288d9a"

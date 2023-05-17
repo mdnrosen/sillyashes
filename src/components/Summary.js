@@ -75,11 +75,14 @@ const Summary = () => {
 
     const handleSummaryContent = () => {
         if (!complete && !locked) {
-            <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="body1">
-                    Finish answering all questions before submitting
-                </Typography>
-            </Box>
+            return (
+                <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <Typography variant="body1">
+                        Finish answering all questions before submitting
+                    </Typography>
+                </Box>
+
+            )
         } else if (complete && !locked) {
             return (
                 <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

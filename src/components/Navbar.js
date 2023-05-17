@@ -41,6 +41,13 @@ const Navbar = () => {
         }
     ]
 
+    const submittedOptions = [
+        {
+            label: 'View Other People',
+            link: '/submitted'
+        }
+    ]
+
 
     const handleClose = () => {
         setAnchorEl(null)

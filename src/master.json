@@ -563,9 +563,9 @@
     },         
     {
         "num" : 27,
-        "title" : "Return of the King",
-        "question" : "Jofra Archer will play at least ONE test.",
-        "name": "tf_jofra",
+        "title" : "Woaksy is back",
+        "question" : "Chris Woakes will play at least ONE test.",
+        "name": "tf_woakes",
         "roundName" : "True or False",
         "roundNum" : 5,
         "options" : [
