@@ -23,7 +23,6 @@ const Summary = () => {
     const [ locked, setLocked ] = useState(false)
     
     const [ name, setName ] = useState('')
-    const [ submitted, setSubmitted ] = useState(false)
 
 
     const handleSubmit = () => {

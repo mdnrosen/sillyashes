@@ -43,19 +43,19 @@ function App() {
   }
 
 
-  const getAllGuesses = async () => {
-    try {
-      const res = await axios.get(`http://localhost:7777/people`)
-      console.log(res.data)
-      return res.data
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // const getAllGuesses = async () => {
+  //   try {
+  //     const res = await axios.get(`http://localhost:7777/people`)
+  //     console.log(res.data)
+  //     return res.data
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
-  useEffect(() => {
-    getAllGuesses()
-  },[])
+  // useEffect(() => {
+  //   getAllGuesses()
+  // },[])
   
 
   return (
