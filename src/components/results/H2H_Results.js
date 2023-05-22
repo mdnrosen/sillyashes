@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, ListItemIcon, Stack, Toolbar, ListItem, ListItemText, Typography } from '@mui/material'
 import { ExpandMore, Close, Check } from '@mui/icons-material'
-
-const H2H_Results = ({ guesses, q }) => {
-
+import { GuessContext } from '../../App'
+const H2H_Results = ({ q }) => {
+    const guesses = useContext(GuessContext)
     return (
         <Accordion>
             <AccordionSummary
@@ -62,7 +62,6 @@ const H2H_Results = ({ guesses, q }) => {
                             )} */}
                         </Stack>
                     </Toolbar>
-                        here are some stuffs
                 </AccordionDetails>
         </Accordion>
     )
