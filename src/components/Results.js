@@ -74,11 +74,24 @@ const Results = () => {
 
             
             {person ? 
-                <RadioResults
-                    questions={questions.filter(d => d.roundNum === 1)}
-                    title="Round 1 - Head to Head"
-                    guesses={person.guesses}
-                />
+                <>
+                    <RadioResults
+                        questions={questions.filter(d => d.roundNum === 1)}
+                        title="Round 1 - Head to Head"
+                        guesses={JSON.parse(person.guesses)}
+                    />
+                    <RadioResults
+                        questions={questions.filter(d => d.roundNum === 4)}
+                        title="Round 4 - Randoms"
+                        guesses={JSON.parse(person.guesses)}
+                    />
+                    <RadioResults
+                        questions={questions.filter(d => d.roundNum === 5)}
+                        title="Round 5 - True or False"
+                        guesses={JSON.parse(person.guesses)}
+                    />
+                
+                </>
                 : null
             }
         </>

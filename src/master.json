@@ -19,7 +19,7 @@
                 "team": "eng"
             }
         ],
-        "answer" : "Jimmy Anderson"
+        "answer" : "James Anderson"
     },          
     {
         "num" : 2,
@@ -59,8 +59,8 @@
 
             },
             {
-                "label" : "Marnus Labushagne",
-                "value" : "Marnus Labushagne",
+                "label" : "Marnus Labuschagne",
+                "value" : "Marnus Labuschagne",
                 "team": "aus"
 
             }
@@ -145,7 +145,7 @@
             }
         
         ],
-        "answer" : "Marnus Labuschagne"
+        "answer" : "Steve Smith"
     },    
     {
 
@@ -203,7 +203,7 @@
             }
         
         ],
-        "answer" : "aus"
+        "answer" : "Australia"
     },   
     {
         "num" : 9,
