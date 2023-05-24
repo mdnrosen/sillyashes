@@ -119,7 +119,7 @@
             }
         
         ],
-        "answer" : "Joe Root"
+        "answer" : "Harry Brook"
     },       
     {
         "num" : 6,
@@ -145,7 +145,7 @@
             }
         
         ],
-        "answer" : "Steve Smith"
+        "answer" : "Marnus Labuschagne"
     },    
     {
 
@@ -268,7 +268,7 @@
         "help": "Picked in the starting XI or a concussion sub",
         "title": "Rest & Rotate",
         "question" : "How many different players will play a test?",
-        "answer" : "",
+        "answer" : 31,
         "name": "num_playersTotal"
 
     },          
@@ -279,7 +279,7 @@
         "title": "In the gloves",
         "help": "Nicks or top edges, just anything in the gloves",
         "question" : "How many wicket keeper catches?",
-        "answer" : "",
+        "answer" : 42,
         "name": "num_wk"
 
     },       
@@ -290,7 +290,7 @@
         "title": "Go Hard",
         "help" : "Rounded to the nearest whole number please",
         "question" : "What will Ben Stokes' batting strike rate be?",
-        "answer" : "",
+        "answer" : 82,
         "name": "num_stokesSR"
 
     },
@@ -301,7 +301,7 @@
         "title": "Nice Garry",
         "question" : "How many wickets will fall to spin?",
         "help" : "Pretty self-explanatory",
-        "answer" : "",
+        "answer" : 33,
         "name": "num_spin"
 
     },        
@@ -311,7 +311,7 @@
         "roundNum" : 3,
         "title" : "Agar-ing it",
         "question" : "How many runs will be scored at number 11?",
-        "answer" : "",
+        "answer" : 36,
         "help" : "Not listed 11, but whoever is the last man in",
         "name": "num_elevenRuns"
 
@@ -324,6 +324,7 @@
         "title": "Broad's Bunny",
         "explainer" : "",
         "question" : "How many times will Stuart Broad dismiss David Warner?",
+        "answer" : "2 - 3",
         "options" : [
             {
                 "label" : "0 - 1",
@@ -356,6 +357,7 @@
         "title": "Road House",
         "help": "Flat pitch or rain, doesn't matter.",
         "question" : "Which venue will see the fewest wickets fall?",
+        "answer": "Old Trafford",
         "options" : [
             {
                 "label" : "Edgbaston",
@@ -389,6 +391,7 @@
         "title": "All-round Aussie",
 
         "question" : "What will be the lower for Cameron Green? His:",
+        "answer" : "Batting Average",
         "options" : [
             {
                 "label" : "Batting Average",
@@ -409,6 +412,7 @@
         "title": "Runs on the board",
         "help": "Takes into account BOTH team's first innings of each Test.",
         "question" : "What will be the average first innings score?",
+        "answer" : "300 - 349",
         "options" : [
             {
                 "label" : "< 200",
@@ -441,6 +445,7 @@
         "title": "An early lead?",
         "help": "First three Tests are Edgbaston, Lord's & Headingley",
         "question" : "After 3 tests, what will the series score be?",
+        "answer" : "1 - 1",
         "options" : [
             {
                 "label" : "0 - 0",
@@ -492,6 +497,7 @@
         "title": "Don't let the tail wag",
         "help": "Batters 9, 10 and 11. eg. Jack Leach as a nightwatchman counts as a tailender",
         "question" : "What will be the most common method of dismissal for tailenders?",
+        "answer" : "Caught Outfield",
         "options" : [
             {
                 "label" : "Bowled",
@@ -524,6 +530,7 @@
         "title": "End of an era?",
         "help" : "Shortly after meaning by the time this quiz is marked",
         "question" : "Who will annouce their retirement during or shortly after the series?",
+        "answer" : "Stuart Broad",
         "options" : [
             {
                 "label" : "Jimmy Anderson",
@@ -547,6 +554,7 @@
         "num" : 26,
         "title" : "Let's chase",
         "question" : "England will choose to bowl every time they win a toss.",
+        "answer" : "false",
         "name": "tf_chase",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -565,6 +573,7 @@
         "num" : 27,
         "title" : "Woaksy is back",
         "question" : "Chris Woakes will play at least ONE test.",
+        "answer" : "true",
         "name": "tf_woakes",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -584,6 +593,7 @@
         "num" : 28,
         "title": "Bowl them out",
         "question" : "England will take 20 wickets in EVERY test.",
+        "answer" : "true",
         "name": "tf_20wickets",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -603,6 +613,8 @@
         "num" : 29,
         "title": "Nighthawk",
         "question" : "Stuart Broad will bat at SIX OR HIGHER at least once",
+        "answer" : "true",
+
         "help" : "In any scenario",
         "name": "tf_nighthawk",
         "roundName" : "True or False",
@@ -623,6 +635,7 @@
         "num" : 30,
         "title": "Jason Roy'd",
         "question" : "England will drop a batter during the series.",
+        "answer" : "false",
         "help" : "Out of the team, not down the order",
         "name": "tf_batterDrop",
         "roundName" : "True or False",
@@ -643,6 +656,8 @@
         "num" : 31,
         "title": "Runs at the top",
         "question" : "Any opener (for either team) will score more runs than Rory Burns in 2019 (390).",
+        "answer" : "false",
+
         "name": "tf_moreThanBurns",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -662,6 +677,8 @@
         "num" : 32,
         "title": "Baz Ball",
         "question" : "England will score 175+ in a session",
+        "answer" : "false",
+
         "name": "tf_bazBall",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -681,6 +698,8 @@
         "num" : 33,
         "title": "Loyalty to spin",
         "question" : "Jack Leach will play all FIVE tests.",
+        "answer" : "true",
+
         "name": "tf_leachy",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -700,6 +719,7 @@
         "num" : 34,
         "title": "Back to form",
         "question" : "Joe Root will score a hundred",
+
         "name": "tf_rootTon",
         "roundName" : "True or False",
         "roundNum" : 5,
@@ -721,6 +741,8 @@
         "title": "Dead Rubber",
         "help": "By 'decided', we mean the winner or retainer of the Ashes",
         "question" : "The Ashes will be decided before the 5th Test.",
+        "answer" : "false",
+
         "name": "tf_decided",
         "roundName" : "True or False",
         "roundNum" : 5,

@@ -26,7 +26,7 @@ const PickEm = ({ setGuesses }) => {
 
     
     return (
-        <Card sx={{ md: {m: 1} }}>
+        <Card sx={{ md: { m: 1 } }}>
             <CardHeader
                 sx={{ display: 'flex', justifyContent: 'center', background: '#15295e', color: 'white', borderBottom: 1}}
                 title={<Typography textAlign="left" variant="h5">Round 2 - Pick 'Em</Typography>}
@@ -48,10 +48,7 @@ const PickEm = ({ setGuesses }) => {
                             question={getRoundQs().find(q => q.name === '5fers')}
                         />    
                  
-                         {/* <FiveWickets 
-                            handlePickem={handlePickem}
-                            question={getRoundQs().find(q => q.name === '5fers')}
-                        />                        */}
+    
                         <BigHitters 
                             handlePickem={handlePickem}
                             question={getRoundQs().find(q => q.name === 'bigHitters')}

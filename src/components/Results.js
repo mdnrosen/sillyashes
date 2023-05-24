@@ -15,13 +15,10 @@ const Results = () => {
         getGuesses()
     },[])
 
-    console.log('______>>>>>>',questions.filter(d => d.roundNum === 1))
 
     useEffect(() => {
         if (!person) return
         console.log('doing something with the guesses')
-        console.log(person.name)
-        console.log(person.guesses)
     },[ person ])
 
 

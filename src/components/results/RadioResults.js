@@ -7,7 +7,7 @@ const RadioResults = ({ questions, title, guesses }) => {
     const [ score, setScore ] = useState(0)
     const [open, setOpen] = useState(false)
 
-
+    
 
     const mark = () => {
 
@@ -34,7 +34,7 @@ const RadioResults = ({ questions, title, guesses }) => {
                             <Typography variant="h6">{title}</Typography>
                         } 
                         secondary={
-                            <Typography color="primary" variant="overline">{`ROUND SCORE: ${score}`}</Typography>
+                            <Typography color="primary" variant="overline">{`ROUND SCORE: ${score}/${questions.length * 5}`}</Typography>
                         }
                     />
                     <IconButton onClick={() => setOpen(!open)}>
