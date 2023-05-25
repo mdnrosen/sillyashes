@@ -24,13 +24,13 @@ const Results = () => {
 
     
     const getGuesses = () => {
-        axios.get('http://localhost:7777/people')
+        axios.get('https://p1g54m69yb.execute-api.eu-west-1.amazonaws.com/prod/people')
             .then(res => {
-                setData(res.data)
-                const opts = res.data.map(p => {
+                setData(res.body)
+                const opts = res.body.map(p => {
                     return {
                         label: p.name,
-                        id: p._id
+                        id: p.id
                     }
                 })
                 setOptions(opts)

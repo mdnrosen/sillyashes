@@ -33,7 +33,7 @@ const Summary = () => {
         setLoading(true)
         try {
 
-            const res = await axios.post('http://localhost:7777/add', {
+            const res = await axios.post('https://p1g54m69yb.execute-api.eu-west-1.amazonaws.com/prod/people', {
                 name,
                 guesses
             })
