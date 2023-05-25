@@ -31,7 +31,7 @@ const Home = () => {
             <Typography variant="body2" sx={{ mt: 2, mb: 2 }}>
                Your answers will be locked when you submit, or automatically at midnight on the 15th June 2023.
             </Typography>
-            {window.localStorage.getItem('sillyashes_locked') ? 
+            {window.localStorage.getItem('sillyAshes_locked') ? 
                 <Button
                     size="large"
                     variant="contained"

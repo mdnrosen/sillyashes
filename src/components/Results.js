@@ -26,8 +26,8 @@ const Results = () => {
     const getGuesses = () => {
         axios.get('https://p1g54m69yb.execute-api.eu-west-1.amazonaws.com/prod/people')
             .then(res => {
-                setData(res.body)
-                const opts = res.body.map(p => {
+                setData(res.data.body)
+                const opts = res.data.body.map(p => {
                     return {
                         label: p.name,
                         id: p.id
@@ -75,17 +75,17 @@ const Results = () => {
                     <RadioResults
                         questions={questions.filter(d => d.roundNum === 1)}
                         title="Round 1 - Head to Head"
-                        guesses={JSON.parse(person.guesses)}
+                        guesses={person.guesses}
                     />
                     <RadioResults
                         questions={questions.filter(d => d.roundNum === 4)}
                         title="Round 4 - Randoms"
-                        guesses={JSON.parse(person.guesses)}
+                        guesses={person.guesses}
                     />
                     <RadioResults
                         questions={questions.filter(d => d.roundNum === 5)}
                         title="Round 5 - True or False"
-                        guesses={JSON.parse(person.guesses)}
+                        guesses={person.guesses}
                     />
                 
                 </>
