@@ -35,6 +35,11 @@ const Summary = () => {
 
     const saveGuesses = async () => {
         if (dupName) return
+        if (!name) {
+            setDupName(true)
+            // handle this shit
+            window.alert('You need a')
+        }
         setLoading(true)
         try {
 
@@ -42,6 +47,8 @@ const Summary = () => {
                 name,
                 guesses
             })
+
+            console.log(res)
             
             // need to set cookie to know if this device has submitted answers 
             window.localStorage.setItem('sillyAshes_locked', true)
@@ -51,7 +58,6 @@ const Summary = () => {
         
         } catch(err) {
             setLoading(false)
-            console.log(err)
             window.alert('Oops. Something went wrong, try again later')
         }
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import players from '../players.json'
-import { getAvatarName, getBGColor, getRandy } from '../helpers'
+import { getAvatarName, getBGColor, getRandy, sortByName } from '../helpers'
 import { Box, Checkbox, Chip, Divider, FormControlLabel, FormGroup, Grid, Toolbar, Tooltip, Typography } from '@mui/material'
 import QTitle from './QTitle' 
 import { GuessContext } from '../App'
@@ -64,7 +64,7 @@ const Quack = ({ handlePickem, question }) => {
                     
                 </Toolbar>
                 <Grid container spacing={2}>
-                    {batters.map(p =>
+                    {sortByName(batters).map(p =>
                         <Grid item xs={12} sm={6} md={4} lg={3} key={p.id}>
                             <FormGroup
                                 onChange={handleChange}

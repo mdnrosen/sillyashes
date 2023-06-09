@@ -442,7 +442,7 @@
         "roundName" : "Randoms",
         "roundNum" : 4,
         "name": "m_afterThree",
-        "title": "An early lead?",
+        "title": "Scores on the doors",
         "help": "First three Tests are Edgbaston, Lord's & Headingley",
         "question" : "After 3 tests, what will the series score be?",
         "answer" : "1 - 1",
@@ -572,7 +572,7 @@
     {
         "num" : 27,
         "title" : "Woaksy is back",
-        "question" : "Chris Woakes will play at least ONE test.",
+        "question" : "Chris Woakes will play at least TWO tests.",
         "answer" : "true",
         "name": "tf_woakes",
         "roundName" : "True or False",
@@ -591,7 +591,7 @@
     },          
     {
         "num" : 28,
-        "title": "Bowl them out",
+        "title": "Roll Them",
         "question" : "England will take 20 wickets in EVERY test.",
         "answer" : "true",
         "name": "tf_20wickets",
@@ -696,11 +696,11 @@
     },           
     {
         "num" : 33,
-        "title": "Loyalty to spin",
-        "question" : "Jack Leach will play all FIVE tests.",
+        "title": "Return of the Beard",
+        "question" : "Moeen Ali will take at least 10 wickets",
         "answer" : "true",
 
-        "name": "tf_leachy",
+        "name": "tf_moeen",
         "roundName" : "True or False",
         "roundNum" : 5,
         "options" : [
@@ -717,8 +717,9 @@
     },             
     {
         "num" : 34,
-        "title": "Back to form",
+        "title": "It's been a while...",
         "question" : "Joe Root will score a hundred",
+        "help" : "His last Ashes hundred was at Trent Bridge 2015",
 
         "name": "tf_rootTon",
         "roundName" : "True or False",

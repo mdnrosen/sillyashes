@@ -3,6 +3,7 @@ import players from '../players.json'
 import { Box, FormControl, InputLabel, Select, MenuItem, Grid, Typography } from '@mui/material'
 import { GuessContext } from '../App'
 import QTitle from './QTitle'
+import { sortByName } from '../helpers'
 const FullStraight = ({ handlePickem, question }) => {
     const guesses = useContext(GuessContext)
     const bowlersAus = players.filter(p => p.team === 'Australia' && p.bowler)
@@ -42,7 +43,7 @@ const FullStraight = ({ handlePickem, question }) => {
                         <FormControl fullWidth>
                             <InputLabel>England</InputLabel>
                             <Select label="England" name="engFS" onChange={handleChange} value={selected.engFS || ''}>
-                                {bowlersEng.map((b, i) =>
+                                {sortByName(bowlersEng).map((b, i) =>
                                     <MenuItem
                                         key={i}
                                         value={b.name}
@@ -58,7 +59,7 @@ const FullStraight = ({ handlePickem, question }) => {
                         <FormControl fullWidth>
                             <InputLabel>Australia</InputLabel>
                             <Select label="Australia" name="ausFS" onChange={handleChange} value={selected.ausFS || ''}>
-                                {bowlersAus.map((b, i) =>
+                                {sortByName(bowlersAus).map((b, i) =>
                                     <MenuItem
                                         key={i}
                                         value={b.name}

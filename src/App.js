@@ -24,6 +24,7 @@ import theme from './theme'
 import defaultState from './defaultState.json'
 import ScrollToTop from './components/ScrollToTop'
 import ScrollTopButton from './components/ScrollTopButton';
+import Everybody from './components/Everybody';
 
 export const GuessContext = createContext([])
 
@@ -75,6 +76,7 @@ function App() {
               <Route path="/multi" element={<Multis setGuesses={setGuesses} />} />
               <Route path="/truefalse" element={<TrueFalse setGuesses={setGuesses}  />} />
               <Route path="/summary" element={<Summary />} />
+              <Route path="/seeeveryone" element={<Everybody />} />
               <Route path="/results" element={<Results />} />
               <Route exact path="/" element={<Home />} />
               <Route path="/*" element={<NotFound />} />

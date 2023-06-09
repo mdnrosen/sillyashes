@@ -12,6 +12,7 @@ exports.getBGColor = (name, players) => {
 
 
 exports.questionAnswered = (question, guesses) => {
+    if (guesses) return
     if (question.name === 'bigHitters' || question.name === 'fullStraight') {
         const answers = Object.values(guesses[question.name])
         return answers.length === 2 ? true : false
@@ -23,8 +24,10 @@ exports.questionAnswered = (question, guesses) => {
 
 exports.sortByName = (players) => {
     function compare(a, b) {
-        if (a.name < b.name) return -1
-        if (a.name > b.name) return 1
+        const lastNameA = a.name.split(' ')[1]
+        const lastNameB = b.name.split(' ')[1]
+        if (lastNameA < lastNameB) return -1
+        if (lastNameA > lastNameB) return 1
         return 0
     }
     return players.sort(compare)
