@@ -65,7 +65,7 @@ const Navbar = () => {
             sx={{ display: 'flex', mb: 1, justifyContent: 'space-between' }}
         >
 
-            <Box component="img" src={Logo} height={40} />
+            <Box onClick={() => navigate('/')} component="img" src={Logo} height={40} />
             <IconButton 
                 size="large"
                 ref={buttonRef}

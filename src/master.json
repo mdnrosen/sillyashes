@@ -27,7 +27,7 @@
         "roundNum" : 1,
         "slug" : "head",
         "name": "h2h_wickets_aus",
-        "title": "P v J",
+        "title": "Skipper v Statue",
         "question" : "Who will take more wickets?",
         "options" : [{
                 "label" : "Pat Cummins",
@@ -35,8 +35,8 @@
                 "team": "aus"
             },
             {
-                "label" : "Josh Hazlewood",
-                "value" : "Josh Hazlewood",
+                "label" : "Scott Boland",
+                "value" : "Scott Boland",
                 "team": "aus"
             }
         
@@ -224,7 +224,7 @@
         "title": "Quack Quack",
         "help" : "David Warner in 2019 got 3, so that would be 9 points",
         "marks" : "+3 for each duck",
-        "question" : "Pick THREE top 7 batters who will get ducks.",
+        "question" : "Pick THREE batters who will get ducks.",
         "options" : "batter"
     },        
     {
