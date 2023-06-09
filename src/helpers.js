@@ -12,7 +12,7 @@ exports.getBGColor = (name, players) => {
 
 
 exports.questionAnswered = (question, guesses) => {
-    if (guesses) return
+    
     if (question.name === 'bigHitters' || question.name === 'fullStraight') {
         const answers = Object.values(guesses[question.name])
         return answers.length === 2 ? true : false

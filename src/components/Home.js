@@ -11,14 +11,7 @@ const Home = () => {
 
     const submittedContent = () => (
         < >
-            <Typography variant="h4">
-                THE ASHES 2023
-            </Typography>    
-
-            <Typography variant="overline">
-                --- POINTLESS PREDICTIONS ---
-            </Typography>
-            <Typography variant="body2" sx={{ mt: 2 }}>
+            <Typography variant="body2" sx={{ m: 2 }}>
                 Thanks for playing. You can view your answers by clicking below. Once the series is over, check back to see how you did.
             </Typography>  
             <Button
@@ -34,6 +27,7 @@ const Home = () => {
 
     const mainContent = () => (
         <>
+        
             <Typography variant="body2" sx={{ mt: 2 }}>
                 Here's some silly questions about the upcoming Ashes series.
             </Typography>            

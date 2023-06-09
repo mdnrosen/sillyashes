@@ -48,7 +48,6 @@ const Summary = () => {
                 guesses
             })
 
-            console.log(res)
             
             // need to set cookie to know if this device has submitted answers 
             window.localStorage.setItem('sillyAshes_locked', true)

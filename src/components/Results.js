@@ -18,7 +18,6 @@ const Results = () => {
 
     useEffect(() => {
         if (!person) return
-        console.log('doing something with the guesses')
     },[ person ])
 
 

@@ -25,6 +25,7 @@ import defaultState from './defaultState.json'
 import ScrollToTop from './components/ScrollToTop'
 import ScrollTopButton from './components/ScrollTopButton';
 import Everybody from './components/Everybody';
+import { Reset } from './components/ResetAll';
 
 export const GuessContext = createContext([])
 
@@ -44,22 +45,6 @@ function App() {
   }
 
 
-
-  // const getAllGuesses = async () => {
-  //   try {
-  //     const res = await axios.get(`http://localhost:7777/people`)
-  //     console.log(res.data)
-  //     return res.data
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getAllGuesses()
-  // },[])
-  
-
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md" sx={{ m:1, mx: 'auto',  p: { xs: 0, sm: 2 }, borderRight: 5, borderRightColor: '#00843D', borderLeft: 5, borderLeftColor: '#15295e' }}>
@@ -77,7 +62,9 @@ function App() {
               <Route path="/truefalse" element={<TrueFalse setGuesses={setGuesses}  />} />
               <Route path="/summary" element={<Summary />} />
               <Route path="/seeeveryone" element={<Everybody />} />
-              <Route path="/results" element={<Results />} />
+              <Route path="/reseteverything" element={<Reset />} />
+              {/* RESULTS TO BE BUILT OUT LATER */}
+              {/* <Route path="/results" element={<Results />} /> */}
               <Route exact path="/" element={<Home />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
