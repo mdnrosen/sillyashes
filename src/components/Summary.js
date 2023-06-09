@@ -16,10 +16,13 @@ import { GuessContext } from '../App';
 // change data to questions in this file
 const Summary = () => {
     const guesses = useContext(GuessContext)
+
     
     const navigate = useNavigate()
     const [ loading, setLoading ] = useState(false)
     const [ complete, setComplete ] = useState(true)
+    const [ people, setPeople] = useState([])
+    const [ dupName, setDupName] = useState(false)
     const [ locked, setLocked ] = useState(false)
     
     const [ name, setName ] = useState('')
@@ -29,7 +32,9 @@ const Summary = () => {
         complete ? saveGuesses() : window.alert('Please finish answering all questions before submitting')
     }
 
+
     const saveGuesses = async () => {
+        if (dupName) return
         setLoading(true)
         try {
 
@@ -61,9 +66,35 @@ const Summary = () => {
 
 
     useEffect(() => {
+        const match = people.filter(p => p.name === name)
+        if (match.length) {
+            setDupName(true)
+        } else {
+            setDupName(false)
+        }
+    },[name])
+
+
+    useEffect(() => {
         const res = window.localStorage.getItem('sillyAshes_locked')
         setLocked(res)
     },[])
+
+
+    const getPeople = async () => {
+        try {
+            const { data } = await axios('https://p1g54m69yb.execute-api.eu-west-1.amazonaws.com/prod/people')
+            setPeople(data.body)
+        } catch (err) {
+            window.alert('Something went wrong. Please try again later')
+        }
+    }
+
+  useEffect(() => {
+    // get all submitted people so far....
+    if (window.localStorage.getItem('sillyAshes_locked')) return
+    getPeople()
+},[])
 
     useEffect(() => {
         checkAllAnswered()
@@ -85,17 +116,24 @@ const Summary = () => {
         } else if (complete && !locked) {
             return (
                 <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <Typography variant="body2">Review your answers before submitting</Typography>
-                    <Typography variant="body2">Once you've submitted, you cannot change your answers</Typography>
+
+                    <Typography variant="h6">You have answered all questions</Typography>
+                    <hr />
+                    <Typography variant="body1">You can review your answered below</Typography>
+                    <Typography variant="body2">Once you've submitted you cannot change your answers</Typography>
                     <Typography variant="body2">Fill in your name or a nickname below (please do not use your email)</Typography>
                     <TextField 
+                        error={dupName}
                         placeholder='Enter your name or a nickname'
                         fullWidth 
-                        required
+                        sx={{ m: 2}}
+                        required    
                         onChange={(e) => setName(e.target.value)}
+                        helperText={dupName ? `${name} is already taken` : null}
                     />
                     <Button
                         fullWidth 
+                        disabled={dupName}
                         variant="contained" 
                         onClick={handleSubmit}
                         color="primary">
@@ -111,14 +149,6 @@ const Summary = () => {
                 </Box>
             )
         }
-        // 1. Unfinished and unlocked
-            // Needs 'please complete anwwers message'
-
-        // 2. Finished and unlocked
-            // needs input to complete 
-
-        // 3. Finished and locked
-            // Needs input to see other peoples answers maybe, if not, just a thank you
     }
 
 
@@ -141,32 +171,7 @@ const Summary = () => {
             <Divider />
             <Toolbar sx={{ p: 3, background: '#add8e680', display: 'flex', justifyContent: 'center' }}>
                 {handleSummaryContent()}
-                {/* {complete ? 
-                    <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <Typography variant="body2">Review your answers before submitting</Typography>
-                        <Typography variant="body2">Once you've submitted, you cannot change your answers</Typography>
-                        <Typography variant="body2">Fill in your name or a nickname below (please do not use your email)</Typography>
-                        <TextField 
-                            placeholder='Enter your name or a nickname'
-                            fullWidth 
-                            required
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <Button
-                            fullWidth 
-                            variant="contained" 
-                            onClick={handleSubmit}
-                            color="primary">Submit Answers</Button>
 
-
-                    </Box>
-                
-                    
-                
-                : <Typography variant="body1">
-                    Finish answering all questions before submitting
-                </Typography>
-} */}
             </Toolbar>
             <Divider />
         
