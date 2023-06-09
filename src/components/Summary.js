@@ -41,13 +41,13 @@ const Summary = () => {
             // need to set cookie to know if this device has submitted answers 
             window.localStorage.setItem('sillyAshes_locked', true)
             
-            console.log(res)
             setLoading(false)
             window.location.reload()
         
         } catch(err) {
             setLoading(false)
             console.log(err)
+            window.alert('Oops. Something went wrong, try again later')
         }
     }
 
@@ -107,7 +107,7 @@ const Summary = () => {
             return (
                 <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     Your answers are locked and submitted
-                    <p>Current Score: <strong>0</strong></p>
+                    <p>Check back after the Ashes to see how you did</p>
                 </Box>
             )
         }

@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Grid, FormControl, IconButton, TextField, Typography  } from '@mui/material'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GuessContext } from '../App'
 import QTitle from './QTitle'
@@ -12,6 +12,12 @@ const Numbers = ({ setGuesses }) => {
     const handleChange = (e) => {
         setGuesses({...guesses, [e.target.name]: e.target.value})
     }
+
+    useEffect(() => {
+        if (window.localStorage.getItem('sillyAshes_locked')) {
+            navigate('/summary')
+        }
+    },[])
 
     
 

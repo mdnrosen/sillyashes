@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import data from '../master.json'
@@ -17,6 +17,13 @@ const HeadtoHead = ({ setGuesses }) => {
     const handleChange = (e) => {
        setGuesses({...guesses, [e.target.name]: e.target.value})
     }
+
+
+    useEffect(() => {
+        if (window.localStorage.getItem('sillyAshes_locked')) {
+            navigate('/summary')
+        }
+    },[])
 
 
     return (

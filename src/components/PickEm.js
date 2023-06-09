@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Grid, IconButton, Typography } from '@mui/material'
 
@@ -23,6 +23,12 @@ const PickEm = ({ setGuesses }) => {
         setGuesses({...guesses, [questionName]: selected })
     }
 
+
+    useEffect(() => {
+        if (window.localStorage.getItem('sillyAshes_locked')) {
+            navigate('/summary')
+        }
+    },[])
 
     
     return (

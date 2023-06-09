@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import QTitle from './QTitle'
@@ -19,6 +19,12 @@ const Multis = ({ setGuesses }) => {
         setGuesses({...guesses, [e.target.name]: e.target.value})
     }
 
+
+    useEffect(() => {
+        if (window.localStorage.getItem('sillyAshes_locked')) {
+            navigate('/summary')
+        }
+    },[])
 
     return (
         <Card sx={{ md: {m: 1} }}>
